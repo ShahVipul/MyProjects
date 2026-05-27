@@ -1,0 +1,222 @@
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 92K
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul  16K May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul  489 May 27 08:40 output.txt
+-rw-r--r-- 1 vipul vipul  702 May 27 09:29 ls.txt
+-rw-r--r-- 1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rw-r--r-- 1 vipul vipul    0 May 27 09:39 permissions_ownership.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ chmod -R 777 *
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 92K
+-rwxrwxrwx 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrwx 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx 3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx 1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx 1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx 1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx 1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx 1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx 1 vipul vipul    0 May 27 09:39 permissions_ownership.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ chmod o-x ai_query_app/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 92K
+-rwxrwxrwx 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrw- 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx 3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx 1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx 1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx 1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx 1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx 1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx 1 vipul vipul    0 May 27 09:39 permissions_ownership.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 92K
+-rwxrwxrwx 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrw- 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx 3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx 1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx 1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx 1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx 1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx 1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx 1 vipul vipul    0 May 27 09:39 permissions_ownership.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ chmod u-w STEP_BY_STEP.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 92K
+-r-xrwxrwx 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrw- 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx 3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx 1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx 1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx 1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx 1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx 1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx 1 vipul vipul    0 May 27 09:39 permissions_ownership.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ chmod g-r README.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltr
+total 92
+-r-xrwxrwx 1 vipul vipul  8738 Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx 1 vipul vipul 18245 Mar 11 15:38 testindex2test.html
+-rwx-wxrwx 1 vipul vipul     0 May 24 10:01 README.md
+-rwxrwxrwx 1 vipul vipul     0 May 24 10:02 commands.md
+-rwxrwxrwx 1 vipul vipul     0 May 24 10:02 troubleshooting.md
+drwxrwxrw- 3 vipul vipul  4096 May 27 04:24 ai_query_app
+drwxrwxrwx 3 vipul vipul  4096 May 27 04:25 test2
+-rwxrwxrwx 1 vipul vipul 16381 May 27 07:37 commands.txt
+-rwxrwxrwx 1 vipul vipul   458 May 27 07:55 test123.txt
+-rwxrwxrwx 1 vipul vipul   489 May 27 08:40 output.txt
+-rwxrwxrwx 1 vipul vipul   702 May 27 09:29 ls.txt
+-rwxrwxrwx 1 vipul vipul 23900 May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx 1 vipul vipul     0 May 27 09:39 permissions_ownership.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+ipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sudo groupadd -g 2000 developers
+[sudo: authenticate] Password:
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sudo groupadd -g 2000 developers1
+groupadd: GID '2000' already exists
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/gro
+groff/  group   group-
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/group/ | grep dev*
+cat: /etc/group/: Not a directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/groups | grep dev*
+cat: /etc/groups: No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/group\ | grep dev*
+cat: '/etc/group ': No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/group | grep dev*
+video:x:44:
+plugdev:x:46:vipul
+render:x:990:
+netdev:x:105:
+developers:x:2000:
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sudo groupadd -g 2500 testers
+groupadd: group 'testers' already exists
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sudo groupadd -g 2500 tester
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/group | grep test*
+grep: test2: Is a directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/group | grep test*
+grep: test2: Is a directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/group | grep tes*
+grep: test2: Is a directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/group | grep teste*
+testers:x:1050:
+tester:x:2500:
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ su tester
+su: user tester does not exist or the user entry does not contain all the required fields
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ su deveopers
+su: user deveopers does not exist or the user entry does not contain all the required fields
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sudo useradd -g 2000 testuser
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ su tester
+su: user tester does not exist or the user entry does not contain all the required fields
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ su testuser
+Password:
+su: Authentication failure
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ su testuser
+Password:
+su: Authentication failure
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/users | grep teste*
+cat: /etc/users: No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/user | grep teste*
+cat: /etc/user: No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/usr | grep teste*
+cat: /etc/usr: No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/user
+cat: /etc/user: No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/passwd | grep teste*
+testers:x:1050:1050::/home/testers:/bin/sh
+testers2:x:1170:1050::/home/testers2:/bin/sh
+testuser:x:1171:2000::/home/testuser:/bin/sh
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sudo useradd -u 3122 -g 2000 testuser
+useradd: user 'testuser' already exists
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sudo useradd -u 3122 -g 2000 testuser2
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat /etc/passwd | grep teste*
+testers:x:1050:1050::/home/testers:/bin/sh
+testers2:x:1170:1050::/home/testers2:/bin/sh
+testuser:x:1171:2000::/home/testuser:/bin/sh
+testuser2:x:3122:2000::/home/testuser2:/bin/sh
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ su testuser2
+Password:
+su: Authentication failure
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ passws testuser2
+Command 'passws' not found, did you mean:
+  command 'passwd' from deb passwd (1:4.17.4-2ubuntu3)
+Try: sudo apt install <deb name>
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ passwd testuser2
+passwd: You may not view or modify password information for testuser2.
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sudo passwd testuser2
+New password:
+Retype new password:
+passwd: password updated successfully
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ su testuser2
+Password:
+$
+$
+$ bash
+testuser2@VsHostname:/home/vipul/workspace/MyProjects/Infra_Automation/Linux$ pwd
+/home/vipul/workspace/MyProjects/Infra_Automation/Linux
+testuser2@VsHostname:/home/vipul/workspace/MyProjects/Infra_Automation/Linux$ ls
+README.md        ai_query_app  commands.txt                          ls.txt      permissions_ownership.txt  test2                troubleshooting.md
+STEP_BY_STEP.md  commands.md   file_viewing_and_text_processing.txt  output.txt  test123.txt                testindex2test.html
+testuser2@VsHostname:/home/vipul/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 100K
+-r-xrwxrwx 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwx-wxrwx 1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrw- 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx 3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx 1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx 1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx 1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx 1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx 1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx 1 vipul vipul 5.4K May 27 09:42 permissions_ownership.txt
+testuser2@VsHostname:/home/vipul/workspace/MyProjects/Infra_Automation/Linux$ vi STEP_BY_STEP.md
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ getfacl commands.md
+# file: commands.md
+# owner: vipul
+# group: vipul
+user::rwx
+group::rwx
+other::rwx
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ setfacl -m u:testuser2:rw commands.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ getfacl commands.md
+# file: commands.md
+# owner: vipul
+# group: vipul
+user::rwx
+user:testuser2:rw-
+group::rwx
+mask::rwx
+other::rwx
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ 
