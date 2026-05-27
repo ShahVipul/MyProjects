@@ -1,0 +1,197 @@
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat output.txt
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+Permissions & Ownership
+Process Management
+System Monitoring & Information
+Network Commands
+
+User & Group Management
+Package Management
+Compression & Archiving
+Disk & Storage Management
+Text Processing & Pipelines
+Security & Logging
+Miscellaneous Essential Commands
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat -b output.txt
+     1  Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+     2  line addition
+     3  README
+     4  File & Directory Management
+     5  File Viewing & Editing
+     6  Permissions & Ownership
+     7  Process Management
+     8  System Monitoring & Information
+     9  Network Commands
+
+    10  User & Group Management
+    11  Package Management
+    12  Compression & Archiving
+    13  Disk & Storage Management
+    14  Text Processing & Pipelines
+    15  Security & Logging
+    16  Miscellaneous Essential Commands
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ less output.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ more output.txt
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+Permissions & Ownership
+Process Management
+System Monitoring & Information
+Network Commands
+
+User & Group Management
+Package Management
+Compression & Archiving
+Disk & Storage Management
+Text Processing & Pipelines
+Security & Logging
+Miscellaneous Essential Commands
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ more output.txt  | head 5
+head: cannot open '5' for reading: No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ more output.txt  | head -5
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ more output.txt  | tail -5
+Compression & Archiving
+Disk & Storage Management
+Text Processing & Pipelines
+Security & Logging
+Miscellaneous Essential Commands
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ less output.txt | head -5
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ head -n 6 output.txt
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+Permissions & Ownership
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ tail -n 3 output.txt
+Text Processing & Pipelines
+Security & Logging
+Miscellaneous Essential Commands
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat output.txt
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+Permissions & Ownership
+Process Management
+System Monitoring & Information
+Network Commands
+
+User & Group Management
+Package Management
+Compression & Archiving
+Disk & Storage Management
+Text Processing & Pipelines
+Security & Logging
+Miscellaneous Essential Commands
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sed -i 's/Logging/loggedin/g' output.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep -i loggedin *
+grep: ai_query_app: Is a directory
+output.txt:Security & loggedin
+grep: test2: Is a directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep -i loggedin output.txt
+Security & loggedin
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sed 's/loggedin/Logging/g' output.txt
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+Permissions & Ownership
+Process Management
+System Monitoring & Information
+Network Commands
+
+User & Group Management
+Package Management
+Compression & Archiving
+Disk & Storage Management
+Text Processing & Pipelines
+Security & Logging
+Miscellaneous Essential Commands
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sed '-i s/loggedin/Logging/g' output.txt
+sed: -e expression #1, char 1: unknown command: `o'
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sed -i 's/loggedin/Logging/g' output.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat output.txt
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+Permissions & Ownership
+Process Management
+System Monitoring & Information
+Network Commands
+
+User & Group Management
+Package Management
+Compression & Archiving
+Disk & Storage Management
+Text Processing & Pipelines
+Security & Logging
+Miscellaneous Essential Commands
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltr
+total 72
+-rwxr-xr-x 1 vipul vipul  8738 Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul 18245 Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul     0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul     0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul     0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul  4096 May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul  4096 May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul 16381 May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul   458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul   458 May 27 08:11 output.txt
+-rw-r--r-- 1 vipul vipul  6029 May 27 08:12 file_viewing_and_text_processing.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ wc -l file_viewing_and_text_processing.txt
+159 file_viewing_and_text_processing.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ wc -c file_viewing_and_text_processing.txt
+6029 file_viewing_and_text_processing.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ wc file_viewing_and_text_processing.txt
+ 159  601 6029 file_viewing_and_text_processing.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ wc -w file_viewing_and_text_processing.txt
+601 file_viewing_and_text_processing.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sed 's/Logging/loggedin/g' output.txt >output2.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ diff output.txt output2.txt
+16c16
+< Security & Logging
+---
+> Security & loggedin
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ diff output2.txt output.txt
+16c16
+< Security & loggedin
+---
+> Security & Logging
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+

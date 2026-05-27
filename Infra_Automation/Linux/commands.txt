@@ -212,4 +212,95 @@ total 0
 -rw-r--r-- 1 vipul vipul 0 May 27 07:07 testfile.log
 -rw-r--r-- 1 vipul vipul 0 May 27 07:08 testfile2.log
 vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ find . -name app.txt
+./ai_query_app/ai_query_app/backend/app.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ pwd
+/home/vipul/workspace/MyProjects/Infra_Automation/Linux
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ find . -iname App.txt
+./ai_query_app/ai_query_app/backend/app.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ find . -name App.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ find . -iname App.txt
+./ai_query_app/ai_query_app/backend/app.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ find . -iname Ap*
+./ai_query_app/ai_query_app/backend/app.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep testfile2.log commands.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cp testfile.log testfile2.log
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cp testfile.log testfile2.log ../
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cp testfile.log testfile2.log ../Storage/
+-rw-r--r-- 1 vipul vipul 0 May 27 07:09 testfile2.log
+-rw-r--r-- 1 vipul vipul 0 May 27 07:08 testfile2.log
+-rw-r--r-- 1 vipul vipul    0 May 27 07:08 testfile2.log
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ mv testfile.log testfile2.log ../Systemd/.
+-rw-r--r-- 1 vipul vipul 0 May 27 07:08 testfile2.log
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep testfile2.log *
+grep: ai_query_app: Is a directory
+commands.txt:vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cp testfile.log testfile2.log
+commands.txt:vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cp testfile.log testfile2.log ../
+commands.txt:vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cp testfile.log testfile2.log ../Storage/
+commands.txt:-rw-r--r-- 1 vipul vipul 0 May 27 07:09 testfile2.log
+commands.txt:-rw-r--r-- 1 vipul vipul 0 May 27 07:08 testfile2.log
+commands.txt:-rw-r--r-- 1 vipul vipul    0 May 27 07:08 testfile2.log
+commands.txt:vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ mv testfile.log testfile2.log ../Systemd/.
+commands.txt:-rw-r--r-- 1 vipul vipul 0 May 27 07:08 testfile2.log
+grep: test2: Is a directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ tree
+.
+├── README.md
+├── STEP_BY_STEP.md
+├── ai_query_app
+│   └── ai_query_app
+│       ├── backend
+│       │   ├── ai_engine.txt
+│       │   ├── app.txt
+│       │   ├── config.txt
+│       │   └── db_connector.txt
+│       ├── conf
+│       │   ├── abcenv.txt
+│       │   └── logging.txt
+│       ├── frontend
+│       │   └── index.txt
+│       ├── requirements.txt
+│       ├── run.txt
+│       └── sql
+├── commands.md
+├── commands.txt
+├── output.txt
+├── test2
+│   └── test2
+│       └── abc.txt
+├── testindex2test.html
+└── troubleshooting.md
+
+9 directories, 17 files
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ stat  testindex2test.html
+  File: testindex2test.html
+  size: 18245           Blocks: 40         IO Block: 4096   regular file
+Device: 8,48    Inode: 46601       Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: ( 1000/   vipul)   Gid: ( 1000/   vipul)
+Access: 2026-05-27 06:54:52.434263306 +0000
+Modify: 2026-03-11 15:38:38.000000000 +0000
+Change: 2026-05-27 04:25:42.723532324 +0000
+ Birth: 2026-05-27 04:25:42.723532324 +0000
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ stat test2/test2/abc.txt
+  File: test2/test2/abc.txt
+  size: 0               Blocks: 0          IO Block: 4096   regular empty file
+Device: 8,48    Inode: 46600       Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: ( 1000/   vipul)   Gid: ( 1000/   vipul)
+Access: 2026-05-23 18:21:58.486825405 +0000
+Modify: 2026-05-23 18:21:58.486825405 +0000
+Change: 2026-05-27 04:25:03.227531722 +0000
+ Birth: 2026-05-27 04:25:03.227531722 +0000
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+
 
