@@ -1,0 +1,24 @@
+@echo off
+title AI Query App - Flask Server
+echo ============================================
+echo   AI Query App - Starting Flask Server
+echo ============================================
+
+:: Activate virtual environment if it exists
+if exist "venv\Scripts\activate.bat" (
+    call venv\Scripts\activate.bat
+    echo Virtual environment activated.
+)
+
+:: Create logs directory
+if not exist "logs" mkdir logs
+
+echo Starting Python Flask server...
+echo Access the app at: http://localhost:5000
+echo Open frontend\index.html in your browser
+echo Press Ctrl+C to stop the server
+echo.
+
+python -m backend.app
+
+pause

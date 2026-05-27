@@ -1,0 +1,114 @@
+"""
+backend/app.py
+Flask REST API — bridges the frontend HTML page with AI + MySQL.
+
+Endpoints:
+  POST /api/query      — Main: takes prompt, returns SQL + results
+  GET  /api/health     — Health check (DB + AI status)
+  GET  /api/schema     — Returns DB schema description
+"""
+
+import logging
+import logging.config
+import os
+import sys
+from pathlib import Path
+
+# ── Path setup so imports work from project root ──────────
+BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(BASE_DIR))
+
+# ── Configure logging ─────────────────────────────────────
+os.makedirs(BASE_DIR / "logs", exist_ok=True)
+logging.config.fileConfig(BASE_DIR / "conf" / "logging.conf")
+logger = logging.getLogger("app")
+
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+
+from backend.config import FLASK_PORT, FLASK_DEBUG, DB_SCHEMA_CONTEXT
+from backend.ai_engine import prompt_to_sql
+from backend.db_connector import run_query, test_connection
+
+# ── Easter egg — import antigravity (launches browser joke) ─
+try:
+    import antigravity  # noqa: F401  (Python Easter egg)
+    logger.info("🚀 Antigravity module loaded — we're flying!")
+except Exception:
+    pass
+
+app = Flask(__name__)
+CORS(app)  # Allow requests from the HTML frontend
+
+
+# ─────────────────────────────────────────────────────────
+#  POST /api/query
+#  Body: { "prompt": "Show me all fraud alerts for customer 101" }
+# ─────────────────────────────────────────────────────────
+@app.route("/api/query", methods=["POST"])
+def query():
+    data = request.get_json()
+    if not data or "prompt" not in data:
+        return jsonify({"error": "Missing 'prompt' in request body"}), 400
+
+    user_prompt = data["prompt"].strip()
+    if not user_prompt:
+        return jsonify({"error": "Prompt cannot be empty"}), 400
+
+    logger.info(f"Received prompt: {user_prompt}")
+
+    try:
+        # Step 1: AI converts prompt → SQL
+        ai_result = prompt_to_sql(user_prompt)
+        sql       = ai_result["sql"]
+        explanation = ai_result["explanation"]
+
+        # Step 2: Execute SQL against MySQL
+        db_result = run_query(sql)
+
+        return jsonify({
+            "success":     True,
+            "prompt":      user_prompt,
+            "sql":         sql,
+            "explanation": explanation,
+            "columns":     db_result["columns"],
+            "rows":        db_result["rows"],
+            "row_count":   db_result["row_count"]
+        })
+
+    except ValueError as ve:
+        logger.warning(f"Validation error: {ve}")
+        return jsonify({"success": False, "error": str(ve)}), 400
+    except RuntimeError as re_err:
+        logger.error(f"Runtime error: {re_err}")
+        return jsonify({"success": False, "error": str(re_err)}), 500
+    except Exception as e:
+        logger.exception(f"Unexpected error: {e}")
+        return jsonify({"success": False, "error": f"Unexpected error: {str(e)}"}), 500
+
+
+# ─────────────────────────────────────────────────────────
+#  GET /api/health
+# ─────────────────────────────────────────────────────────
+@app.route("/api/health", methods=["GET"])
+def health():
+    db_ok = test_connection()
+    return jsonify({
+        "status":    "ok" if db_ok else "degraded",
+        "database":  "connected" if db_ok else "unreachable",
+        "ai_engine": "gemini-1.5-flash"
+    })
+
+
+# ─────────────────────────────────────────────────────────
+#  GET /api/schema
+# ─────────────────────────────────────────────────────────
+@app.route("/api/schema", methods=["GET"])
+def schema():
+    return jsonify({"schema": DB_SCHEMA_CONTEXT})
+
+
+# ─────────────────────────────────────────────────────────
+if __name__ == "__main__":
+    logger.info(f"Starting AI Query API on port {FLASK_PORT}")
+    app.run(host="0.0.0.0", port=FLASK_PORT, debug=FLASK_DEBUG)

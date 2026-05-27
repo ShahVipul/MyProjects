@@ -1,0 +1,130 @@
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ pwd
+/home/vipul/workspace/MyProjects/Infra_Automation/Linux
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls
+README.md  STEP_BY_STEP.md  ai_query_app  commands.md  output.txt  test2  testindex2test.html  troubleshooting.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -la
+total 52
+drwxr-xr-x  4 vipul vipul  4096 May 27 04:26 .
+drwxr-xr-x 13 vipul vipul  4096 May 24 10:01 ..
+-rw-r--r--  1 vipul vipul     0 May 24 10:01 README.md
+-rwxr-xr-x  1 vipul vipul  8738 Mar  7 06:50 STEP_BY_STEP.md
+drwxr-xr-x  3 vipul vipul  4096 May 27 04:24 ai_query_app
+-rw-r--r--  1 vipul vipul     0 May 24 10:02 commands.md
+-rw-r--r--  1 vipul vipul   120 May 27 04:18 output.txt
+drwxr-xr-x  3 vipul vipul  4096 May 27 04:25 test2
+-rwxr-xr-x  1 vipul vipul 18245 Mar 11 15:38 testindex2test.html
+-rw-r--r--  1 vipul vipul     0 May 24 10:02 troubleshooting.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ lar
+Command 'lar' not found, but there are 27 similar ones.
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -lar
+total 52
+-rw-r--r--  1 vipul vipul     0 May 24 10:02 troubleshooting.md
+-rwxr-xr-x  1 vipul vipul 18245 Mar 11 15:38 testindex2test.html
+drwxr-xr-x  3 vipul vipul  4096 May 27 04:25 test2
+-rw-r--r--  1 vipul vipul   120 May 27 04:18 output.txt
+-rw-r--r--  1 vipul vipul     0 May 24 10:02 commands.md
+drwxr-xr-x  3 vipul vipul  4096 May 27 04:24 ai_query_app
+-rwxr-xr-x  1 vipul vipul  8738 Mar  7 06:50 STEP_BY_STEP.md
+-rw-r--r--  1 vipul vipul     0 May 24 10:01 README.md
+drwxr-xr-x 13 vipul vipul  4096 May 24 10:01 ..
+drwxr-xr-x  4 vipul vipul  4096 May 27 04:26 .
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -larth
+total 52K
+-rwxr-xr-x  1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x  1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+drwxr-xr-x 13 vipul vipul 4.0K May 24 10:01 ..
+-rw-r--r--  1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r--  1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r--  1 vipul vipul    0 May 24 10:02 troubleshooting.md
+-rw-r--r--  1 vipul vipul  120 May 27 04:18 output.txt
+drwxr-xr-x  3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x  3 vipul vipul 4.0K May 27 04:25 test2
+drwxr-xr-x  4 vipul vipul 4.0K May 27 04:26 .
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ld */
+drwxr-xr-x 3 vipul vipul 4096 May 27 04:24 ai_query_app/
+drwxr-xr-x 3 vipul vipul 4096 May 27 04:25 test2/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -lt | grep ^d
+drwxr-xr-x 3 vipul vipul  4096 May 27 04:25 test2
+drwxr-xr-x 3 vipul vipul  4096 May 27 04:24 ai_query_app
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -lt | grep ^d | grep -i Ai
+drwxr-xr-x 3 vipul vipul  4096 May 27 04:24 ai_query_app
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -lSh
+total 44K
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+-rw-r--r-- 1 vipul vipul  120 May 27 04:18 output.txt
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -i
+46515 README.md  46602 STEP_BY_STEP.md  46582 ai_query_app  41959 commands.md  41976 output.txt  46584 test2  46601 testindex2test.html  46554 troubleshooting.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -li
+total 44
+46515 -rw-r--r-- 1 vipul vipul     0 May 24 10:01 README.md
+46602 -rwxr-xr-x 1 vipul vipul  8738 Mar  7 06:50 STEP_BY_STEP.md
+46582 drwxr-xr-x 3 vipul vipul  4096 May 27 04:24 ai_query_app
+41959 -rw-r--r-- 1 vipul vipul     0 May 24 10:02 commands.md
+41976 -rw-r--r-- 1 vipul vipul   120 May 27 04:18 output.txt
+46584 drwxr-xr-x 3 vipul vipul  4096 May 27 04:25 test2
+46601 -rwxr-xr-x 1 vipul vipul 18245 Mar 11 15:38 testindex2test.html
+46554 -rw-r--r-- 1 vipul vipul     0 May 24 10:02 troubleshooting.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -R
+.:
+README.md  STEP_BY_STEP.md  ai_query_app  commands.md  output.txt  test2  testindex2test.html  troubleshooting.md
+
+./ai_query_app:
+ai_query_app
+
+./ai_query_app/ai_query_app:
+backend  conf  frontend  requirements.txt  run.txt  sql
+
+./ai_query_app/ai_query_app/backend:
+ai_engine.txt  app.txt  config.txt  db_connector.txt
+
+./ai_query_app/ai_query_app/conf:
+abcenv.txt  logging.txt
+
+./ai_query_app/ai_query_app/frontend:
+index.txt
+
+./ai_query_app/ai_query_app/sql:
+
+./test2:
+test2
+
+./test2/test2:
+abc.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ alias ll='ls -ltarh'
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ll
+total 52K
+-rwxr-xr-x  1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x  1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+drwxr-xr-x 13 vipul vipul 4.0K May 24 10:01 ..
+-rw-r--r--  1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r--  1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r--  1 vipul vipul    0 May 24 10:02 troubleshooting.md
+-rw-r--r--  1 vipul vipul  120 May 27 04:18 output.txt
+drwxr-xr-x  3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x  3 vipul vipul 4.0K May 27 04:25 test2
+drwxr-xr-x  4 vipul vipul 4.0K May 27 04:26 .
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ pwd
+/home/vipul/workspace/MyProjects/Infra_Automation/Linux
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cd /
+vipul@VsHostname:/$ cd -
+/home/vipul/workspace/MyProjects/Infra_Automation/Linux
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$

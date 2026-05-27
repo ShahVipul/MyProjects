@@ -1,0 +1,44 @@
+"""
+backend/config.py
+Loads all environment variables from conf/.env
+"""
+
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+# Load .env from the conf/ folder (one level up from backend/)
+BASE_DIR = Path(__file__).resolve().parent.parent
+ENV_PATH = BASE_DIR / "conf" / ".env"
+load_dotenv(dotenv_path=ENV_PATH)
+
+# ── Database ──────────────────────────────────────────────
+DB_HOST     = os.getenv("DB_HOST", "localhost")
+DB_PORT     = int(os.getenv("DB_PORT", 3306))
+DB_NAME     = os.getenv("DB_NAME", "bank_db")
+DB_USER     = os.getenv("DB_USER", "root")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "")
+
+# ── Google Gemini ─────────────────────────────────────────
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+
+# ── Flask ─────────────────────────────────────────────────
+FLASK_PORT  = int(os.getenv("FLASK_PORT", 5000))
+FLASK_DEBUG = os.getenv("FLASK_DEBUG", "true").lower() == "true"
+
+# ── Database schema description (sent to AI as context) ───
+DB_SCHEMA_CONTEXT = """
+You have access to a MySQL database called 'bank_db' with these tables:
+
+1. customers (customer_id, name, email, phone, city, created_at)
+2. accounts  (account_id, customer_id, account_type, balance, status, created_at)
+3. transactions (txn_id, account_id, customer_id, amount, txn_type, status,
+                 error_code, error_message, created_at)
+4. fraud_alerts (alert_id, customer_id, txn_id, alert_type, severity, flagged_at)
+
+transaction status values: 'success', 'failed', 'pending'
+transaction txn_type values: 'credit', 'debit', 'transfer'
+error_code examples: 'INSUFF_FUNDS', 'DAILY_LIMIT', 'BLOCKED_ACCT', 'TIMEOUT', 'INVALID_PIN'
+fraud alert_type examples: 'UNUSUAL_PATTERN', 'LARGE_AMOUNT', 'FOREIGN_IP', 'VELOCITY_CHECK'
+severity values: 'LOW', 'MEDIUM', 'HIGH', 'CRITICAL'
+"""

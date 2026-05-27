@@ -1,0 +1,77 @@
+"""
+backend/ai_engine.py
+Uses Google Gemini (free API) to convert natural language prompts to SQL.
+"""
+
+import logging
+import re
+import google.generativeai as genai
+from backend.config import GEMINI_API_KEY, DB_SCHEMA_CONTEXT
+
+logger = logging.getLogger("app")
+
+# Configure Gemini
+genai.configure(api_key=GEMINI_API_KEY)
+model = genai.GenerativeModel("gemini-2.5-flash-lite")
+
+
+SYSTEM_PROMPT = f"""
+You are an expert SQL generator for a banking database.
+
+DATABASE SCHEMA:
+{DB_SCHEMA_CONTEXT}
+
+YOUR RULES:
+1. Convert the user's natural language question into a valid MySQL SELECT query.
+2. Return ONLY the SQL query — no explanation, no markdown, no backticks.
+3. Always add a LIMIT 200 clause unless the user asks for a count.
+4. Use table aliases for readability.
+5. For customer lookups, join customers + accounts + transactions as needed.
+6. For fraud queries, use the fraud_alerts table.
+7. For failed transaction reasons, group by error_code and error_message.
+8. Never use DROP, DELETE, UPDATE, INSERT, or any DML/DDL statements.
+9. If the question is unclear, return: SELECT 'Please clarify your question' AS message;
+
+EXAMPLES:
+User: "Show all customers from Mumbai"
+SQL: SELECT customer_id, name, email, phone, city FROM customers WHERE city = 'Mumbai' LIMIT 200;
+
+User: "Count of failed transactions today"
+SQL: SELECT COUNT(*) AS failed_count FROM transactions WHERE status = 'failed' AND DATE(created_at) = CURDATE();
+
+User: "Why are transactions failing?"
+SQL: SELECT error_code, error_message, COUNT(*) AS occurrence_count FROM transactions WHERE status = 'failed' GROUP BY error_code, error_message ORDER BY occurrence_count DESC LIMIT 50;
+
+User: "Show high severity fraud alerts"
+SQL: SELECT fa.alert_id, c.name, c.email, fa.alert_type, fa.severity, fa.flagged_at FROM fraud_alerts fa JOIN customers c ON fa.customer_id = c.customer_id WHERE fa.severity IN ('HIGH','CRITICAL') ORDER BY fa.flagged_at DESC LIMIT 200;
+"""
+
+
+def prompt_to_sql(user_prompt: str) -> dict:
+    """
+    Convert a natural language prompt to a SQL query using Gemini.
+    Returns: { "sql": "...", "explanation": "..." }
+    """
+    if not GEMINI_API_KEY or GEMINI_API_KEY == "YOUR_GOOGLE_GEMINI_API_KEY_HERE":
+        raise ValueError("Gemini API key not configured. Please add it to conf/.env")
+
+    full_prompt = f"{SYSTEM_PROMPT}\n\nUser question: {user_prompt}"
+
+    logger.info(f"Sending prompt to Gemini: {user_prompt}")
+    response = model.generate_content(full_prompt)
+    raw_sql = response.text.strip()
+
+    # Strip any markdown code fences if model adds them
+    raw_sql = re.sub(r"```sql|```", "", raw_sql).strip()
+
+    logger.info(f"Gemini returned SQL: {raw_sql}")
+
+    # Generate a short human-readable explanation
+    explain_prompt = f"In one sentence, explain what this SQL query does in plain English for a business user:\n{raw_sql}"
+    explain_response = model.generate_content(explain_prompt)
+    explanation = explain_response.text.strip()
+
+    return {
+        "sql": raw_sql,
+        "explanation": explanation
+    }
