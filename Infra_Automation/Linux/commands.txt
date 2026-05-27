@@ -128,3 +128,51 @@ vipul@VsHostname:/$ cd -
 vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
 vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
 vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ mkdir test
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls
+README.md  STEP_BY_STEP.md  ai_query_app  commands.md  commands.txt  output.txt  test  test2  testindex2test.html  troubleshooting.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ rmdir test
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ rmdir test
+rmdir: failed to remove 'test': No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls
+README.md  STEP_BY_STEP.md  ai_query_app  commands.md  commands.txt  output.txt  test2  testindex2test.html  troubleshooting.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ mkdir -p test/test2/test3/nested_test_folder/abc.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls
+README.md  STEP_BY_STEP.md  ai_query_app  commands.md  commands.txt  output.txt  test  test2  testindex2test.html  troubleshooting.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ pwd
+/home/vipul/workspace/MyProjects/Infra_Automation/Linux
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cd test
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux/test$ ls
+test2
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux/test$ cd test2/test3/nested_test_folder/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux/test/test2/test3/nested_test_folder$ ls
+abc.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux/test/test2/test3/nested_test_folder$ cd ../../../
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux/test$ cd ..
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh test
+total 4.0K
+drwxr-xr-x 3 vipul vipul 4.0K May 27 06:58 test2
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltRh test
+test:
+total 4.0K
+drwxr-xr-x 3 vipul vipul 4.0K May 27 06:58 test2
+
+test/test2:
+total 4.0K
+drwxr-xr-x 3 vipul vipul 4.0K May 27 06:58 test3
+
+test/test2/test3:
+total 4.0K
+drwxr-xr-x 3 vipul vipul 4.0K May 27 06:58 nested_test_folder
+
+test/test2/test3/nested_test_folder:
+total 4.0K
+drwxr-xr-x 2 vipul vipul 4.0K May 27 06:58 abc.txt
+
+test/test2/test3/nested_test_folder/abc.txt:
+total 0
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+
+
