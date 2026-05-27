@@ -1,0 +1,13 @@
+total 84K
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul  16K May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul  489 May 27 08:40 output.txt
+-rw-r--r-- 1 vipul vipul  18K May 27 09:09 file_viewing_and_text_processing.txt
+-rw-r--r-- 1 vipul vipul    0 May 27 09:29 ls.txt

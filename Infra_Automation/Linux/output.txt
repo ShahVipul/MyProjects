@@ -15,3 +15,11 @@ Disk & Storage Management
 Text Processing & Pipelines
 Security & Logging
 Miscellaneous Essential Commands
+3
+5
+1
+2
+
+
+5
+Security & Logging

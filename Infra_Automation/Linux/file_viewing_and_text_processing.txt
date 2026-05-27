@@ -194,4 +194,415 @@ vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ diff output2.txt
 ---
 > Security & Logging
 vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat output.txt
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+Permissions & Ownership
+Process Management
+System Monitoring & Information
+Network Commands
+
+User & Group Management
+Package Management
+Compression & Archiving
+Disk & Storage Management
+Text Processing & Pipelines
+Security & Logging
+Miscellaneous Essential Commands
+3
+5
+1
+2
+
+
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sort output.txt
+
+
+
+
+1
+2
+3
+5
+Compression & Archiving
+Disk & Storage Management
+File & Directory Management
+File Viewing & Editing
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+Miscellaneous Essential Commands
+Network Commands
+Package Management
+Permissions & Ownership
+Process Management
+README
+Security & Logging
+System Monitoring & Information
+Text Processing & Pipelines
+User & Group Management
+line addition
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sort -r output.txt
+line addition
+User & Group Management
+Text Processing & Pipelines
+System Monitoring & Information
+Security & Logging
+README
+Process Management
+Permissions & Ownership
+Package Management
+Network Commands
+Miscellaneous Essential Commands
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+File Viewing & Editing
+File & Directory Management
+Disk & Storage Management
+Compression & Archiving
+5
+3
+2
+1
+
+
+
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sort -rn output.txt
+5
+3
+2
+1
+line addition
+User & Group Management
+Text Processing & Pipelines
+System Monitoring & Information
+Security & Logging
+README
+Process Management
+Permissions & Ownership
+Package Management
+Network Commands
+Miscellaneous Essential Commands
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+File Viewing & Editing
+File & Directory Management
+Disk & Storage Management
+Compression & Archiving
+
+
+
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sort -n output.txt
+
+
+
+
+Compression & Archiving
+Disk & Storage Management
+File & Directory Management
+File Viewing & Editing
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+Miscellaneous Essential Commands
+Network Commands
+Package Management
+Permissions & Ownership
+Process Management
+README
+Security & Logging
+System Monitoring & Information
+Text Processing & Pipelines
+User & Group Management
+line addition
+1
+2
+3
+5
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sort -nr output.txt
+5
+3
+2
+1
+line addition
+User & Group Management
+Text Processing & Pipelines
+System Monitoring & Information
+Security & Logging
+README
+Process Management
+Permissions & Ownership
+Package Management
+Network Commands
+Miscellaneous Essential Commands
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+File Viewing & Editing
+File & Directory Management
+Disk & Storage Management
+Compression & Archiving
+
+
+
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sort -n output.txt
+
+
+
+
+Compression & Archiving
+Disk & Storage Management
+File & Directory Management
+File Viewing & Editing
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+Miscellaneous Essential Commands
+Network Commands
+Package Management
+Permissions & Ownership
+Process Management
+README
+Security & Logging
+System Monitoring & Information
+Text Processing & Pipelines
+User & Group Management
+line addition
+1
+2
+3
+5
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+
+
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ cat output.txt | uniq
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+line addition
+README
+File & Directory Management
+File Viewing & Editing
+Permissions & Ownership
+Process Management
+System Monitoring & Information
+Network Commands
+
+User & Group Management
+Package Management
+Compression & Archiving
+Disk & Storage Management
+Text Processing & Pipelines
+Security & Logging
+Miscellaneous Essential Commands
+3
+5
+1
+2
+
+5
+Security & Logging
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sort output.txt | uniq
+
+1
+2
+3
+5
+Compression & Archiving
+Disk & Storage Management
+File & Directory Management
+File Viewing & Editing
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+Miscellaneous Essential Commands
+Network Commands
+Package Management
+Permissions & Ownership
+Process Management
+README
+Security & Logging
+System Monitoring & Information
+Text Processing & Pipelines
+User & Group Management
+line addition
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sort output.txt | uniq -c
+      3
+      1 1
+      1 2
+      1 3
+      2 5
+      1 Compression & Archiving
+      1 Disk & Storage Management
+      1 File & Directory Management
+      1 File Viewing & Editing
+      1 Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+      1 Miscellaneous Essential Commands
+      1 Network Commands
+      1 Package Management
+      1 Permissions & Ownership
+      1 Process Management
+      1 README
+      2 Security & Logging
+      1 System Monitoring & Information
+      1 Text Processing & Pipelines
+      1 User & Group Management
+      1 line addition
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep vipul ls.txt
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul  16K May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul  489 May 27 08:40 output.txt
+-rw-r--r-- 1 vipul vipul  14K May 27 08:44 file_viewing_and_text_processing.txt
+-rw-r--r-- 1 vipul vipul    0 May 27 08:56 ls.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ egrep 'vipul|Logging' ls.txt
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul  16K May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul  489 May 27 08:40 output.txt
+-rw-r--r-- 1 vipul vipul  14K May 27 08:44 file_viewing_and_text_processing.txt
+-rw-r--r-- 1 vipul vipul    0 May 27 08:56 ls.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ egrep '8.6K|test123' ls.txt
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ egrep '[0-9]+' ls.txt
+total 80K
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul  16K May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul  489 May 27 08:40 output.txt
+-rw-r--r-- 1 vipul vipul  14K May 27 08:44 file_viewing_and_text_processing.txt
+-rw-r--r-- 1 vipul vipul    0 May 27 08:56 ls.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep -F 07:55 ls.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep vipul ls.txt
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul  16K May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul  489 May 27 08:40 output.txt
+-rw-r--r-- 1 vipul vipul  14K May 27 08:44 file_viewing_and_text_processing.txt
+-rw-r--r-- 1 vipul vipul    0 May 27 08:56 ls.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep vipul ls.txt
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul  16K May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul  489 May 27 08:40 output.txt
+-rw-r--r-- 1 vipul vipul  14K May 27 08:44 file_viewing_and_text_processing.txt
+-rw-r--r-- 1 vipul vipul    0 May 27 08:56 ls.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ egrep 'vipul|Logging' ls.txt
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul  16K May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul  489 May 27 08:40 output.txt
+-rw-r--r-- 1 vipul vipul  14K May 27 08:44 file_viewing_and_text_processing.txt
+-rw-r--r-- 1 vipul vipul    0 May 27 08:56 ls.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ egrep '8.6K|test123' ls.txt
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ egrep '[0-9]+' ls.txt
+total 80K
+-rwxr-xr-x 1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxr-xr-x 1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rw-r--r-- 1 vipul vipul    0 May 24 10:01 README.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 commands.md
+-rw-r--r-- 1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxr-xr-x 3 vipul vipul 4.0K May 27 04:25 test2
+-rw-r--r-- 1 vipul vipul  16K May 27 07:37 commands.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+-rw-r--r-- 1 vipul vipul  489 May 27 08:40 output.txt
+-rw-r--r-- 1 vipul vipul  14K May 27 08:44 file_viewing_and_text_processing.txt
+-rw-r--r-- 1 vipul vipul    0 May 27 08:56 ls.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep -F 07:55 ls.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ grep -F 07:55 ls.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ fgrep '07:55' ls.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ fgrep 07:55 ls.txt
+-rw-r--r-- 1 vipul vipul  458 May 27 07:55 test123.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+
 
