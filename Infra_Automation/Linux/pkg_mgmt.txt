@@ -1,0 +1,231 @@
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu resolute InRelease
+Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [136 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [136 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Get:5 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [103 kB]
+Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [95.8 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [33.4 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Components [9940 B]
+Get:9 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [60.8 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [20.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Components [46.0 kB]
+Get:12 http://security.ubuntu.com/ubuntu resolute-security/main Translation-en [31.6 kB]
+Get:13 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Components [2848 B]
+Get:14 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [57.0 kB]
+Get:15 http://security.ubuntu.com/ubuntu resolute-security/universe Translation-en [19.5 kB]
+Get:16 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Components [39.8 kB]
+Fetched 791 kB in 4s (183 kB/s)
+11 packages can be upgraded. Run 'apt list --upgradable' to see them.
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ apt list --upgradable
+base-files/resolute-updates 14ubuntu6.1 amd64 [upgradable from: 14ubuntu6]
+distro-info-data/resolute-updates 0.68ubuntu0.1 all [upgradable from: 0.68build1]
+libgcrypt20/resolute-updates,resolute-security 1.12.0-2ubuntu0.1 amd64 [upgradable from: 1.12.0-2]
+libssh2-1t64/resolute-updates,resolute-security 1.11.1-1ubuntu0.26.04.1 amd64 [upgradable from: 1.11.1-1build2]
+motd-news-config/resolute-updates 14ubuntu6.1 all [upgradable from: 14ubuntu6]
+snapd/resolute-updates 2.75.2+ubuntu26.04.2 amd64 [upgradable from: 2.74.1+ubuntu26.04.4]
+vim-common/resolute-updates,resolute-security 2:9.1.2141-1ubuntu4.2 all [upgradable from: 2:9.1.2141-1ubuntu4.1]
+vim-runtime/resolute-updates,resolute-security 2:9.1.2141-1ubuntu4.2 all [upgradable from: 2:9.1.2141-1ubuntu4.1]
+vim-tiny/resolute-updates,resolute-security 2:9.1.2141-1ubuntu4.2 amd64 [upgradable from: 2:9.1.2141-1ubuntu4.1]
+vim/resolute-updates,resolute-security 2:9.1.2141-1ubuntu4.2 amd64 [upgradable from: 2:9.1.2141-1ubuntu4.1]
+xxd/resolute-updates,resolute-security 2:9.1.2141-1ubuntu4.2 amd64 [upgradable from: 2:9.1.2141-1ubuntu4.1]
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ apt install wget
+Error: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+Error: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo apt install wget
+wget is already the newest version (1.25.0-2ubuntu4).
+wget set to manually installed.
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 11
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo apt remove wget
+REMOVING:
+  ssh-import-id  ubuntu-wsl  wget
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 3, Not Upgrading: 11
+  Freed space: 815 kB
+
+Continue? [Y/n] Y
+(Reading database ... 40233 files and directories currently installed.)
+Removing ssh-import-id (5.11-0ubuntu4) ...
+Removing ubuntu-wsl (1.570) ...
+Removing wget (1.25.0-2ubuntu4) ...
+Processing triggers for install-info (7.2-5ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo apt purge wget
+REMOVING:
+  wget*
+
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 1, Not Upgrading: 11
+  Space needed: 0 B / 1024 GB available
+
+Continue? [Y/n] Y
+(Reading database ... 40201 files and directories currently installed.)
+Purging configuration files for wget (1.25.0-2ubuntu4) ...
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ apt search wget
+abcde/resolute 2.9.3-1build1 all
+  A Better CD Encoder
+
+apt-mirror/resolute 0.5.4-2build1 all
+  APT sources mirroring tool
+
+axel/resolute 2.17.14-3 amd64
+  light command line download accelerator
+
+devscripts/resolute 2.26.7 all
+  scripts to make the life of a Debian Package maintainer easier
+
+dl-distro/resolute 2.4.9-1 all
+  Bash script for downloading and verifying OS images
+
+gdown/resolute 5.2.1+dfsg-1 all
+  Google Drive public file downloader
+
+getdata/resolute 0.2-4build1 all
+  management of external databases
+
+libcupt4-2-downloadmethod-wget/resolute 2.10.4+nmu2build2 amd64
+  flexible package manager -- wget download method
+
+libhttp-tinyish-perl/resolute 0.19-1 all
+  HTTP::Tiny compatible HTTP client wrappers
+
+libwget3/resolute 2.2.0+ds-3build1 amd64
+  Download library for files and recursive websites
+
+ow-shell/resolute 3.2p4+dfsg1-7 amd64
+  shell utilities to talk to an 1-Wire owserver
+
+pwget/resolute 2016.1019+git75c6e3e-9 all
+  downloader utility which resembles wget (implemented in Perl)
+
+python3-pyglfw/resolute 2.10.0+dfsg-1 all
+  Python bindings for GLFW
+
+python3-wget/resolute 3.2-4build1 all
+  pure Python download utility for Python 3
+
+tcllib/resolute 2.0+dfsg-5 all
+  Standard Tcl Library
+
+texlive-latex-extra/resolute 2025.20260124-1 all
+  TeX Live: LaTeX additional packages
+
+wget/resolute 1.25.0-2ubuntu4 amd64
+  retrieves files from the web
+
+wget2/resolute 2.2.0+ds-3build1 amd64
+  file and recursive website downloader
+
+wget2-dev/resolute 2.2.0+ds-3build1 amd64
+  development file for libwget
+
+wput/resolute 0.6.2+git20130413-15 amd64
+  tiny wget-like ftp-client for uploading files
+
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo apt install wget
+Installing:
+  wget
+
+Summary:
+  Upgrading: 0, Installing: 1, Removing: 0, Not Upgrading: 11
+  Download size: 353 kB
+  Space needed: 750 kB / 1024 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 wget amd64 1.25.0-2ubuntu4 [353 kB]
+Fetched 353 kB in 1s (270 kB/s)
+Selecting previously unselected package wget.
+(Reading database ... 40202 files and directories currently installed.)
+Preparing to unpack .../wget_1.25.0-2ubuntu4_amd64.deb ...
+Unpacking wget (1.25.0-2ubuntu4) ...
+Setting up wget (1.25.0-2ubuntu4) ...
+Processing triggers for install-info (7.2-5ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ apt list --installed
+acl/resolute,now 2.3.2-2 amd64 [installed]
+adduser/resolute,now 3.153ubuntu1 all [installed,automatic]
+adwaita-icon-theme/resolute,now 50.0-1 all [installed,automatic]
+apparmor/resolute,now 5.0.0~beta1-0ubuntu7 amd64 [installed]
+apport-core-dump-handler/resolute,now 2.34.0-0ubuntu2 all [installed,automatic]
+apport-symptoms/resolute,now 0.25build1 all [installed,automatic]
+apport/resolute,now 2.34.0-0ubuntu2 all [installed]
+appstream/resolute,now 1.1.2-1 amd64 [installed,automatic]
+apt/resolute,now 3.2.0 amd64 [installed,automatic]
+at-spi2-common/resolute,now 2.60.0-1 all [installed,automatic]
+at-spi2-core/resolute,now 2.60.0-1 amd64 [installed,automatic]
+base-files/resolute,now 14ubuntu6 amd64 [installed,upgradable to: 14ubuntu6.1]
+base-passwd/resolute,now 3.6.8 amd64 [installed,automatic]
+bash-completion/resolute,now 1:2.16.0-8build1 all [installed]
+bash/resolute,now 5.3-2ubuntu1 amd64 [installed]
+bc/resolute,now 1.07.1-4build1 amd64 [installed,automatic]
+bind9-dnsutils/resolute-updates,resolute-security,now 1:9.20.18-1ubuntu2.1 amd64 [installed]
+bind9-host/resolute-updates,resolute-security,now 1:9.20.18-1ubuntu2.1 amd64 [installed,automatic]
+bind9-libs/resolute-updates,resolute-security,now 1:9.20.18-1ubuntu2.1 amd64 [installed,automatic]
+binutils-common/resolute,now 2.46-3ubuntu2 amd64 [installed,automatic]
+binutils-x86-64-linux-gnu/resolute,now 2.46-3ubuntu2 amd64 [installed,automatic]
+binutils/resolute,now 2.46-3ubuntu2 amd64 [installed]
+bsdextrautils/resolute,now 2.41.3-3ubuntu2 amd64 [installed,automatic]
+bsdutils/resolute,now 1:2.41.3-3ubuntu2 amd64 [installed,automatic]
+bubblewrap/resolute-updates,resolute-security,now 0.11.1-1ubuntu0.1 amd64 [installed,automatic]
+byobu/resolute,now 6.11-0ubuntu3 all [installed]
+ca-certificates/resolute,now 20260223 all [installed,automatic]
+chrony/resolute,now 4.8-2ubuntu1 amd64 [installed,automatic]
+cloud-guest-utils/resolute,now 0.33-1build1 all [installed,automatic]
+cloud-init-base/resolute,now 26.1-0ubuntu2 all [installed,automatic]
+cloud-init/resolute,now 26.1-0ubuntu2 all [installed]
+command-not-found/resolute,now 23.04.0build1 all [installed]
+console-setup-linux/resolute,now 1.237ubuntu3 all [installed,automatic]
+console-setup/resolute,now 1.237ubuntu3 all [installed,automatic]
+coreutils-from-uutils/resolute,now 0.0.0~ubuntu25 all [installed]
+coreutils/resolute,now 9.5-1ubuntu2+0.0.0~ubuntu25 all [installed]
+cron-daemon-common/resolute,now 3.0pl1-200ubuntu1 all [installed,automatic]
+cron/resolute,now 3.0pl1-200ubuntu1 amd64 [installed,automatic]
+curl/resolute-updates,resolute-security,now 8.18.0-1ubuntu2.1 amd64 [installed]
+dash/resolute,now 0.5.12-12ubuntu3 amd64 [installed]
+dbus-bin/resolute,now 1.16.2-2ubuntu4 amd64 [installed,automatic]
+dbus-daemon/resolute,now 1.16.2-2ubuntu4 amd64 [installed,automatic]
+dbus-session-bus-common/resolute,now 1.16.2-2ubuntu4 all [installed,automatic]
+dbus-system-bus-common/resolute,now 1.16.2-2ubuntu4 all [installed,automatic]
+dbus-user-session/resolute,now 1.16.2-2ubuntu4 amd64 [installed,automatic]
+dbus-x11/resolute,now 1.16.2-2ubuntu4 amd64 [installed]
+dbus/resolute,now 1.16.2-2ubuntu4 amd64 [installed,automatic]
+dconf-gsettings-backend/resolute,now 0.49.0-4 amd64 [installed,automatic]
+dconf-service/resolute,now 0.49.0-4 amd64 [installed,automatic]
+debconf-i18n/resolute,now 1.5.92 all [installed,automatic]
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ dpkg -l | grep nginx
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ dpkg -l | grep wget
+ii  wget                              1.25.0-2ubuntu4                            amd64        retrieves files from the web
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo dpkg -i package.deb
+dpkg: error: cannot access archive 'package.deb': No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo dpkg -i google-chrome.deb
+dpkg: error: cannot access archive 'google-chrome.deb': No such file or directory
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo yum install nginx
+sudo: 'yum': command not found
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo sudo yum remove nginx^Cm install nginx
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo yum remove nginx
+sudo: 'yum': command not found
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo dnf install nginxsudo dnf install nginx^C
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo dnf install nginx
+sudo: 'dnf': command not found
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ rpm -i java.exe
+Command 'rpm' not found, but can be installed with:
+sudo apt install rpm
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ rpm -ivh java.exe
+Command 'rpm' not found, but can be installed with:
+sudo apt install rpm
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$

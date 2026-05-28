@@ -1,0 +1,344 @@
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ uname -a
+Linux VsHostname 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ uname -r
+6.6.114.1-microsoft-standard-WSL2
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ hostname
+VsHostname
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ hostname -i
+127.0.1.1
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ip r
+default via 172.24.0.1 dev eth0 proto kernel
+172.24.0.0/20 dev eth0 proto kernel scope link src 172.24.9.71
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ whoami
+vipul
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ id vipul
+uid=1000(vipul) gid=1000(vipul) groups=1000(vipul),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users)
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ id developers
+id: 'developers': no such user
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ id testuser2
+uid=3122(testuser2) gid=2000(developers) groups=2000(developers)
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ who
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ w
+ 10:29:40 up  3:43,  1 user,  load average: 0.08, 0.06, 0.01
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+vipul    pts/1    -                08:47    1:42m  0.05s  0.05s -bash
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ date
+Wed May 27 10:29:46 UTC 2026
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ free
+               total        used        free      shared  buff/cache   available
+Mem:         4011656      472280     3495568        3544      186816     3539376
+Swap:        2097152           0     2097152
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ free -g
+               total        used        free      shared  buff/cache   available
+Mem:               3           0           3           0           0           3
+Swap:              2           0           2
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ free -gh
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       462Mi       3.3Gi       3.5Mi       182Mi       3.4Gi
+Swap:          2.0Gi          0B       2.0Gi
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ vmstat
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+ 1  0      0 3494512   9300 177564    0    0   132    21  400    4  0  1 97  2  0  0
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ vmstat -ih
+vmstat: invalid option -- 'i'
+
+Usage:
+ vmstat [options] [delay [count]]
+
+Options:
+ -a, --active           active/inactive memory
+ -f, --forks            number of forks since boot
+ -m, --slabs            slabinfo
+ -n, --one-header       do not redisplay header
+ -s, --stats            event counter statistics
+ -d, --disk             disk statistics
+ -D, --disk-sum         summarize disk statistics
+ -p, --partition <dev>  partition specific statistics
+ -S, --unit <char>      define display unit
+ -w, --wide             wide output
+ -t, --timestamp        show timestamp
+ -y, --no-first         skips first line of output
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see vmstat(8).
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ vmstat -i
+vmstat: invalid option -- 'i'
+
+Usage:
+ vmstat [options] [delay [count]]
+
+Options:
+ -a, --active           active/inactive memory
+ -f, --forks            number of forks since boot
+ -m, --slabs            slabinfo
+ -n, --one-header       do not redisplay header
+ -s, --stats            event counter statistics
+ -d, --disk             disk statistics
+ -D, --disk-sum         summarize disk statistics
+ -p, --partition <dev>  partition specific statistics
+ -S, --unit <char>      define display unit
+ -w, --wide             wide output
+ -t, --timestamp        show timestamp
+ -y, --no-first         skips first line of output
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see vmstat(8).
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ vmstat -d
+disk- ------------reads------------ ------------writes----------- -----IO------
+       total merged sectors      ms  total merged sectors      ms    cur    sec
+ram0       0      0       0       0      0      0       0       0      0      0
+ram1       0      0       0       0      0      0       0       0      0      0
+ram2       0      0       0       0      0      0       0       0      0      0
+ram3       0      0       0       0      0      0       0       0      0      0
+ram4       0      0       0       0      0      0       0       0      0      0
+ram5       0      0       0       0      0      0       0       0      0      0
+ram6       0      0       0       0      0      0       0       0      0      0
+ram7       0      0       0       0      0      0       0       0      0      0
+ram8       0      0       0       0      0      0       0       0      0      0
+ram9       0      0       0       0      0      0       0       0      0      0
+ram10      0      0       0       0      0      0       0       0      0      0
+ram11      0      0       0       0      0      0       0       0      0      0
+ram12      0      0       0       0      0      0       0       0      0      0
+ram13      0      0       0       0      0      0       0       0      0      0
+ram14      0      0       0       0      0      0       0       0      0      0
+ram15      0      0       0       0      0      0       0       0      0      0
+loop0      0      0       0       0      0      0       0       0      0      0
+loop1      0      0       0       0      0      0       0       0      0      0
+loop2      0      0       0       0      0      0       0       0      0      0
+loop3      0      0       0       0      0      0       0       0      0      0
+loop4      0      0       0       0      0      0       0       0      0      0
+loop5      0      0       0       0      0      0       0       0      0      0
+loop6      0      0       0       0      0      0       0       0      0      0
+loop7      0      0       0       0      0      0       0       0      0      0
+sda     2584    468  313562   48631      0      0       0       0      0     34
+sdb      367    137   19570    8436      0      0       0       0      0      5
+sdc      180      0    6304     180      2      0       8     374      0      0
+sdd    44274  15890 3240366  567286  11499   9191  582648  724247      0    394
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sar -u
+Linux 6.6.114.1-microsoft-standard-WSL2 (VsHostname)    05/27/26        _x86_64_        (2 CPU)
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sar
+Linux 6.6.114.1-microsoft-standard-WSL2 (VsHostname)    05/27/26        _x86_64_        (2 CPU)
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sar -r
+Linux 6.6.114.1-microsoft-standard-WSL2 (VsHostname)    05/27/26        _x86_64_        (2 CPU)
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ lscpu
+Architecture:                x86_64
+  CPU op-mode(s):            32-bit, 64-bit
+  Address sizes:             39 bits physical, 48 bits virtual
+  Byte Order:                Little Endian
+CPU(s):                      2
+  On-line CPU(s) list:       0,1
+Vendor ID:                   GenuineIntel
+  Model name:                
+    CPU family:              6
+    Model:                   158
+    Thread(s) per core:      2
+    Core(s) per socket:      1
+    Socket(s):               1
+    Stepping:                13
+    BogoMIPS:                4800.01
+    Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopolo
+                             gy cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pdcm pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ib
+                             rs_enhanced tpr_shadow ept vpid ept_ad fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves vnmi md_clear flush_l1d arch_capabilities
+Virtualization features:
+  Virtualization:            VT-x
+  Hypervisor vendor:         Microsoft
+  Virtualization type:       full
+Caches (sum of all):
+  L1d:                       32 KiB (1 instance)
+  L1i:                       32 KiB (1 instance)
+  L2:                        256 KiB (1 instance)
+  L3:                        8 MiB (1 instance)
+NUMA:
+  NUMA node(s):              1
+  NUMA node0 CPU(s):         0,1
+Vulnerabilities:
+  Gather data sampling:      Unknown: Dependent on hypervisor status
+  Indirect target selection: Mitigation; Aligned branch/return thunks
+  Itlb multihit:             KVM: Mitigation: VMX disabled
+  L1tf:                      Not affected
+  Mds:                       Not affected
+  Meltdown:                  Not affected
+  Mmio stale data:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown
+  Reg file data sampling:    Not affected
+  Retbleed:                  Mitigation; Enhanced IBRS
+  Spec rstack overflow:      Not affected
+  Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+  Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+  Srbds:                     Unknown: Dependent on hypervisor status
+  Tsa:                       Not affected
+  Tsx async abort:           Not affected
+  Vmscape:                   Not affected
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ lsmem
+Command 'lsmem' not found, but can be installed with:
+sudo apt install util-linux-extra
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sudo apt install util-linux-extra
+Installing:
+  util-linux-extra
+
+Installing dependencies:
+  liblastlog2-2
+
+Summary:
+  Upgrading: 0, Installing: 2, Removing: 0, Not Upgrading: 4
+  Download size: 373 kB
+  Space needed: 1405 kB / 1024 GB available
+
+Continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblastlog2-2 amd64 2.41.3-3ubuntu2 [26.7 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute/main amd64 util-linux-extra amd64 2.41.3-3ubuntu2 [346 kB]
+Fetched 373 kB in 2s (202 kB/s)
+Selecting previously unselected package liblastlog2-2:amd64.
+(Reading database ... 36213 files and directories currently installed.)
+Preparing to unpack .../liblastlog2-2_2.41.3-3ubuntu2_amd64.deb ...
+Unpacking liblastlog2-2:amd64 (2.41.3-3ubuntu2) ...
+Selecting previously unselected package util-linux-extra.
+Preparing to unpack .../util-linux-extra_2.41.3-3ubuntu2_amd64.deb ...
+Unpacking util-linux-extra (2.41.3-3ubuntu2) ...
+Setting up liblastlog2-2:amd64 (2.41.3-3ubuntu2) ...
+Setting up util-linux-extra (2.41.3-3ubuntu2) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for libc-bin (2.43-2ubuntu2) ...
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ lsmem
+RANGE                                  SIZE  STATE REMOVABLE BLOCK
+0x0000000000000000-0x00000000f7ffffff  3.9G online       yes  0-30
+0x0000000100000000-0x0000000107ffffff  128M online       yes    32
+
+Memory block size:                128M
+Total online memory:                4G
+Total offline memory:               0B
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ dmesg
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+none            2.0G     0  2.0G   0% /usr/lib/modules/6.6.114.1-microsoft-standard-WSL2
+none            2.0G  4.0K  2.0G   1% /mnt/wsl
+drivers         319G  100G  220G  32% /usr/lib/wsl/drivers
+/dev/sdd       1007G  1.9G  954G   1% /
+none            2.0G   44K  2.0G   1% /mnt/wslg
+none            2.0G     0  2.0G   0% /usr/lib/wsl/lib
+rootfs          2.0G  2.8M  2.0G   1% /init
+none            2.0G  492K  2.0G   1% /run
+none            2.0G     0  2.0G   0% /run/lock
+none            2.0G     0  2.0G   0% /run/shm
+none            2.0G   80K  2.0G   1% /mnt/wslg/versions.txt
+none            2.0G   80K  2.0G   1% /mnt/wslg/doc
+C:\             319G  100G  220G  32% /mnt/c
+D:\             202G  398M  202G   1% /mnt/d
+E:\             411G   27G  384G   7% /mnt/e
+tmpfs           2.0G     0  2.0G   0% /tmp
+none            1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+none            1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+none            1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           392M   12K  392M   1% /run/user/1000
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ du -sh ai_query_app/
+80K     ai_query_app/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ du -sh *
+0       README.md
+12K     STEP_BY_STEP.md
+80K     ai_query_app
+0       commands.md
+16K     commands.txt
+24K     file_viewing_and_text_processing.txt
+4.0K    ls.txt
+4.0K    output.txt
+12K     permissions_ownership.txt
+20K     process_mgmt_commands.txt
+16K     sys_info_commands_for_trobleshooting.txt
+4.0K    test123.txt
+8.0K    test2
+4.0K    test_services.sh
+20K     testindex2test.html
+0       troubleshooting.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ vmstat 1 5
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+ 0  0      0 3390904   7208 298940    0    0   151    30  392    4  0  1 97  2  0  0
+ 0  0      0 3390904   7208 298964    0    0     0     0   26   34  0  0 100  0  0  0
+ 0  0      0 3390904   7208 298964    0    0     0     0   50   63  0  1 99  0  0  0
+ 0  0      0 3390904   7208 298964    0    0     0     0   23   41  0  0 100  0  0  0
+ 0  0      0 3390904   7208 298964    0    0     0     0   19   36  0  0 100  0  0  0
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ iostat -x 1
+Linux 6.6.114.1-microsoft-standard-WSL2 (VsHostname)    05/27/26        _x86_64_        (2 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.24    0.00    1.18    1.58    0.00   97.00
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+sda              0.19     11.26     0.03  15.33   18.82    60.67    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.25
+sdb              0.03      0.70     0.01  27.18   22.99    26.66    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.04
+sdc              0.01      0.23     0.00   0.00    1.00    17.51    0.00      0.00     0.00   0.00  187.00     2.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00  260.00    0.00   0.00
+sdd              3.78    138.76     1.19  23.89   11.25    36.68    0.93     30.10     0.82  46.68   58.94    32.22    0.04     49.48     0.00   4.49    1.11  1350.57    0.24   41.83    0.11   3.09
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.00    0.00    0.50    0.00    0.00   99.50
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+sda              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdb              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdc              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdd              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.00    0.00    1.00    0.00    0.00   99.00
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+sda              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdb              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdc              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdd              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.00    0.00    0.50    0.00    0.00   99.50
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+sda              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdb              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdc              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdd              0.00      0.00     0.00   0.00    0.00     0.00    3.00     12.00     0.00   0.00    1.33     4.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.00    0.00    0.50    0.00    0.00   99.50
+
+Device            r/s     rkB/s   rrqm/s  %rrqm r_await rareq-sz     w/s     wkB/s   wrqm/s  %wrqm w_await wareq-sz     d/s     dkB/s   drqm/s  %drqm d_await dareq-sz     f/s f_await  aqu-sz  %util
+sda              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdb              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdc              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+sdd              0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00      0.00     0.00   0.00    0.00     0.00    0.00    0.00    0.00   0.00
+
+^C
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ sar -u 1 3
+Linux 6.6.114.1-microsoft-standard-WSL2 (VsHostname)    05/27/26        _x86_64_        (2 CPU)
+
+10:38:09        CPU     %user     %nice   %system   %iowait    %steal     %idle
+10:38:10        all      0.00      0.00      0.50      0.00      0.00     99.50
+10:38:11        all      0.50      0.00      0.50      0.00      0.00     99.00
+10:38:12        all      0.50      0.00      0.50      0.00      0.00     99.00
+Average:        all      0.33      0.00      0.50      0.00      0.00     99.17
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ lsblk
+NAME MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda    8:0    0 364.8M  1 disk
+sdb    8:16   0 144.5M  1 disk
+sdc    8:32   0     2G  0 disk [SWAP]
+sdd    8:48   0     1T  0 disk /mnt/wslg/distro
+                               /
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+
+

@@ -1,0 +1,175 @@
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 152K
+-r-xrwxrwx+  1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx   1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwx-wxrwx   1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx+  1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx   1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrw-   3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx   3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx   1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx   1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx   1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx   1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx   1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx   1 vipul vipul  12K May 27 10:10 permissions_ownership.txt
+-rwxr-xr-x   1 vipul vipul  270 May 27 10:20 test_services.sh
+-rw-r--r--   1 vipul vipul  19K May 27 10:27 process_mgmt_commands.txt
+-rw-r--r--   1 vipul vipul  22K May 27 10:39 sys_info_commands_for_trobleshooting.txt
+-rw-r--r--   1 vipul vipul    0 May 27 10:40 compression_archiving.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ tar -cvf ai.tar ai_query_app/
+ai_query_app/
+ai_query_app/ai_query_app/
+ai_query_app/ai_query_app/backend/
+ai_query_app/ai_query_app/backend/db_connector.txt
+ai_query_app/ai_query_app/backend/ai_engine.txt
+ai_query_app/ai_query_app/backend/config.txt
+ai_query_app/ai_query_app/backend/app.txt
+ai_query_app/ai_query_app/frontend/
+ai_query_app/ai_query_app/frontend/index.txt
+ai_query_app/ai_query_app/run.txt
+ai_query_app/ai_query_app/requirements.txt
+ai_query_app/ai_query_app/conf/
+ai_query_app/ai_query_app/conf/logging.txt
+ai_query_app/ai_query_app/conf/abcenv.txt
+ai_query_app/ai_query_app/sql/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 204K
+-r-xrwxrwx+  1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx   1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwx-wxrwx   1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx+  1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx   1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrw-   3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx   3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx   1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx   1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx   1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx   1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx   1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx   1 vipul vipul  12K May 27 10:10 permissions_ownership.txt
+-rwxr-xr-x   1 vipul vipul  270 May 27 10:20 test_services.sh
+-rw-r--r--   1 vipul vipul  19K May 27 10:27 process_mgmt_commands.txt
+-rw-r--r--   1 vipul vipul  22K May 27 10:39 sys_info_commands_for_trobleshooting.txt
+-rw-r--r--   1 vipul vipul    0 May 27 10:40 compression_archiving.txt
+-rw-r--r--   1 vipul vipul  50K May 27 10:41 ai.tar
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ tar -cvzf ai.tar.gz ai_query_app/
+ai_query_app/
+ai_query_app/ai_query_app/
+ai_query_app/ai_query_app/backend/
+ai_query_app/ai_query_app/backend/db_connector.txt
+ai_query_app/ai_query_app/backend/ai_engine.txt
+ai_query_app/ai_query_app/backend/config.txt
+ai_query_app/ai_query_app/backend/app.txt
+ai_query_app/ai_query_app/frontend/
+ai_query_app/ai_query_app/frontend/index.txt
+ai_query_app/ai_query_app/run.txt
+ai_query_app/ai_query_app/requirements.txt
+ai_query_app/ai_query_app/conf/
+ai_query_app/ai_query_app/conf/logging.txt
+ai_query_app/ai_query_app/conf/abcenv.txt
+ai_query_app/ai_query_app/sql/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 216K
+-r-xrwxrwx+  1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx   1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwx-wxrwx   1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx+  1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx   1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrw-   3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx   3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx   1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx   1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx   1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx   1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx   1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx   1 vipul vipul  12K May 27 10:10 permissions_ownership.txt
+-rwxr-xr-x   1 vipul vipul  270 May 27 10:20 test_services.sh
+-rw-r--r--   1 vipul vipul  19K May 27 10:27 process_mgmt_commands.txt
+-rw-r--r--   1 vipul vipul  22K May 27 10:39 sys_info_commands_for_trobleshooting.txt
+-rw-r--r--   1 vipul vipul    0 May 27 10:40 compression_archiving.txt
+-rw-r--r--   1 vipul vipul  50K May 27 10:41 ai.tar
+-rw-r--r--   1 vipul vipul  11K May 27 10:41 ai.tar.gz
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ gunzip ai
+ai.tar.gz     ai_query_app/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ gunzip ai.tar.gz
+gzip: ai.tar already exists; do you wish to overwrite (y or n)? y
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 204K
+-r-xrwxrwx+  1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx   1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwx-wxrwx   1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx+  1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx   1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrw-   3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx   3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx   1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx   1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx   1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx   1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx   1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx   1 vipul vipul  12K May 27 10:10 permissions_ownership.txt
+-rwxr-xr-x   1 vipul vipul  270 May 27 10:20 test_services.sh
+-rw-r--r--   1 vipul vipul  19K May 27 10:27 process_mgmt_commands.txt
+-rw-r--r--   1 vipul vipul  22K May 27 10:39 sys_info_commands_for_trobleshooting.txt
+-rw-r--r--   1 vipul vipul    0 May 27 10:40 compression_archiving.txt
+-rw-r--r--   1 vipul vipul  50K May 27 10:41 ai.tar
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ gzip ai.tar
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 164K
+-r-xrwxrwx+  1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx   1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwx-wxrwx   1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx+  1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx   1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxrwxrw-   3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx   3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx   1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx   1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx   1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx   1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx   1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx   1 vipul vipul  12K May 27 10:10 permissions_ownership.txt
+-rwxr-xr-x   1 vipul vipul  270 May 27 10:20 test_services.sh
+-rw-r--r--   1 vipul vipul  19K May 27 10:27 process_mgmt_commands.txt
+-rw-r--r--   1 vipul vipul  22K May 27 10:39 sys_info_commands_for_trobleshooting.txt
+-rw-r--r--   1 vipul vipul    0 May 27 10:40 compression_archiving.txt
+-rw-r--r--   1 vipul vipul  11K May 27 10:41 ai.tar.gz
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ tar -xvzf ai.tar.gz
+ai_query_app/
+ai_query_app/ai_query_app/
+ai_query_app/ai_query_app/backend/
+ai_query_app/ai_query_app/backend/db_connector.txt
+ai_query_app/ai_query_app/backend/ai_engine.txt
+ai_query_app/ai_query_app/backend/config.txt
+ai_query_app/ai_query_app/backend/app.txt
+ai_query_app/ai_query_app/frontend/
+ai_query_app/ai_query_app/frontend/index.txt
+ai_query_app/ai_query_app/run.txt
+ai_query_app/ai_query_app/requirements.txt
+ai_query_app/ai_query_app/conf/
+ai_query_app/ai_query_app/conf/logging.txt
+ai_query_app/ai_query_app/conf/abcenv.txt
+ai_query_app/ai_query_app/sql/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ls -ltrh
+total 164K
+-r-xrwxrwx+  1 vipul vipul 8.6K Mar  7 06:50 STEP_BY_STEP.md
+-rwxrwxrwx   1 vipul vipul  18K Mar 11 15:38 testindex2test.html
+-rwx-wxrwx   1 vipul vipul    0 May 24 10:01 README.md
+-rwxrwxrwx+  1 vipul vipul    0 May 24 10:02 commands.md
+-rwxrwxrwx   1 vipul vipul    0 May 24 10:02 troubleshooting.md
+drwxr-xr--   3 vipul vipul 4.0K May 27 04:24 ai_query_app
+drwxrwxrwx   3 vipul vipul 4.0K May 27 04:25 test2
+-rwxrwxrwx   1 vipul vipul  16K May 27 07:37 commands.txt
+-rwxrwxrwx   1 vipul vipul  458 May 27 07:55 test123.txt
+-rwxrwxrwx   1 vipul vipul  489 May 27 08:40 output.txt
+-rwxrwxrwx   1 vipul vipul  702 May 27 09:29 ls.txt
+-rwxrwxrwx   1 vipul vipul  24K May 27 09:30 file_viewing_and_text_processing.txt
+-rwxrwxrwx   1 vipul vipul  12K May 27 10:10 permissions_ownership.txt
+-rwxr-xr-x   1 vipul vipul  270 May 27 10:20 test_services.sh
+-rw-r--r--   1 vipul vipul  19K May 27 10:27 process_mgmt_commands.txt
+-rw-r--r--   1 vipul vipul  22K May 27 10:39 sys_info_commands_for_trobleshooting.txt
+-rw-r--r--   1 vipul vipul    0 May 27 10:40 compression_archiving.txt
+-rw-r--r--   1 vipul vipul  11K May 27 10:41 ai.tar.gz
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+

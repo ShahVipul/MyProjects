@@ -1,0 +1,222 @@
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ touch process_mgmt_commands.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps -ef | wc -l
+29
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux | wc -l
+29
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 08:51 ?        00:00:00 /sbin/init
+root           2       1  0 08:51 hvc0     00:00:00 /init
+root           8       2  0 08:51 hvc0     00:00:00 plan9 --control-socket 8 --log-level 4 --server-fd 9 --pipe-fd 11 --log-truncate
+root          48       1  0 08:51 ?        00:00:00 /usr/lib/systemd/systemd-journald
+systemd+      83       1  0 08:51 ?        00:00:00 /usr/lib/systemd/systemd-resolved
+root          90       1  0 08:51 ?        00:00:07 /usr/lib/systemd/systemd-udevd
+root         122       1  0 08:51 ?        00:00:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+root         127       1  0 08:51 ?        00:00:00 /usr/sbin/cron -f -P
+message+     133       1  0 08:51 ?        00:00:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         140       1  0 08:51 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         148       1  0 08:51 ?        00:00:00 /usr/lib/systemd/systemd-logind
+syslog       174       1  0 08:51 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         194       1  0 08:51 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         196       1  0 08:51 tty1     00:00:00 /usr/sbin/agetty --noreset --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - linux
+_chrony      209     122  0 08:51 ?        00:00:01 /usr/sbin/chronyd -n -F 1 -x
+_chrony      213     209  0 08:51 ?        00:00:00 /usr/sbin/chronyd -n -F 1 -x
+root         272       2  0 08:51 ?        00:00:00 /init
+root         273     272  0 08:51 ?        00:00:01 /init
+vipul        278     273  0 08:51 pts/0    00:00:01 -bash
+root         279       2  0 08:51 ?        00:00:00 login -- vipul
+vipul        311       1  0 08:51 ?        00:00:00 /usr/lib/systemd/systemd --user
+vipul        313     311  0 08:51 ?        00:00:00 (sd-pam)
+vipul        338     279  0 08:51 pts/1    00:00:00 -bash
+polkitd     4434       1  0 10:01 ?        00:00:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+root        5268      90  0 10:13 ?        00:00:00 (udev-worker)
+root        5269      90  0 10:13 ?        00:00:00 (udev-worker)
+vipul       5275     278  0 10:13 pts/0    00:00:00 ps -ef
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.3  24348 15316 ?        Ss   08:51   0:00 /sbin/init
+root           2  0.0  0.0   3172  2212 hvc0     Sl+  08:51   0:00 /init
+root           8  0.0  0.0   3172  2044 hvc0     Sl+  08:51   0:00 plan9 --control-socket 8 --log-level 4 --server-fd 9 --pipe-fd 11 --log-truncate
+root          48  0.0  0.5  66788 20288 ?        S<s  08:51   0:00 /usr/lib/systemd/systemd-journald
+systemd+      83  0.0  0.3  22524 14552 ?        Ss   08:51   0:00 /usr/lib/systemd/systemd-resolved
+root          90  0.1  0.3  35108 12180 ?        Ss   08:51   0:07 /usr/lib/systemd/systemd-udevd
+root         122  0.0  0.0   2880  1948 ?        Ss   08:51   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+root         127  0.0  0.0   4464  3096 ?        Ss   08:51   0:00 /usr/sbin/cron -f -P
+message+     133  0.0  0.1   8796  5348 ?        Ss   08:51   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         140  0.0  0.7  44076 29620 ?        Ss   08:51   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         148  0.0  0.2  18576  9460 ?        Ss   08:51   0:00 /usr/lib/systemd/systemd-logind
+syslog       174  0.0  0.1 220532  5520 ?        Ssl  08:51   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         194  0.0  0.8 123440 32328 ?        Ssl  08:51   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         196  0.0  0.0   5484  2720 tty1     Ss+  08:51   0:00 /usr/sbin/agetty --noreset --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - linux
+_chrony      209  0.0  0.3  24572 12044 ?        S    08:51   0:01 /usr/sbin/chronyd -n -F 1 -x
+_chrony      213  0.0  0.0  12080  2448 ?        S    08:51   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         272  0.0  0.0   3176  1116 ?        Ss   08:51   0:00 /init
+root         273  0.0  0.0   3192  1252 ?        S    08:51   0:01 /init
+vipul        278  0.0  0.1   6504  5880 pts/0    Ss   08:51   0:01 -bash
+root         279  0.0  0.1   8632  5568 ?        Ss   08:51   0:00 login -- vipul
+vipul        311  0.0  0.3  22320 13128 ?        Ss   08:51   0:00 /usr/lib/systemd/systemd --user
+vipul        313  0.0  0.1  22896  4088 ?        S    08:51   0:00 (sd-pam)
+vipul        338  0.0  0.1   6128  5416 pts/1    Ss+  08:51   0:00 -bash
+polkitd     4434  0.0  0.2 306436  8296 ?        Ssl  10:01   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+root        5268  0.0  0.1  35112  6364 ?        S    10:13   0:00 (udev-worker)
+root        5269  0.0  0.1  35112  6364 ?        S    10:13   0:00 (udev-worker)
+vipul       5285  0.0  0.1   7152  4384 pts/0    R+   10:13   0:00 ps aux
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ top
+[?1h=[?25l[H[2J(B[mtop - 10:16:28 up  3:30,  1 user,  load average: 0.00, 0.00, 0.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m  27 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m  26 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  2.5 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 75.0 (B[m[39;49mid,(B[m[39;49m[1m 22.5 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m   3917.6 (B[m[39;49mtotal,(B[m[39;49m[1m   3467.6 (B[m[39;49mfree,(B[m[39;49m[1m    443.7 (B[m[39;49mused,(B[m[39;49m[1m    144.6 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m   2048.0 (B[m[39;49mtotal,(B[m[39;49m[1m   2048.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m   3473.9 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m      1 root      20   0   24348  15316  11540 S   0.0   0.4   0:00.83 systemd  (B[m[39;49m[K
+(B[m      2 root      20   0    3172   2212   2072 S   0.0   0.1   0:00.01 init-sy+ (B[m[39;49m[K
+(B[m      8 root      20   0    3172   2044   1940 S   0.0   0.1   0:00.00 init     (B[m[39;49m[K
+(B[m     48 root      19  -1   66788  20288  18992 S   0.0   0.5   0:00.26 systemd+ (B[m[39;49m[K
+(B[m     83 systemd+  20   0   22524  14552  11936 S   0.0   0.4   0:00.12 systemd+ (B[m[39;49m[K
+(B[m     90 root      20   0   35108  12180   9184 S   0.0   0.3   0:07.92 systemd+ (B[m[39;49m[K
+(B[m    122 root      20   0    2880   1948   1824 S   0.0   0.0   0:00.04 chronyd+ (B[m[39;49m[K
+(B[m    127 root      20   0    4464   3096   2848 S   0.0   0.1   0:00.02 cron     (B[m[39;49m[K
+(B[m    133 message+  20   0    8796   5348   4656 S   0.0   0.1   0:00.08 dbus-da+ (B[m[39;49m[K
+(B[m    140 root      20   0   44076  29620  14488 S   0.0   0.7   0:00.16 network+ (B[m[39;49m[K
+(B[m    148 root      20   0   18576   9460   8180 S   0.0   0.2   0:00.09 systemd+ (B[m[39;49m[K
+(B[m    174 syslog    20   0  220532   5520   4580 S   0.0   0.1   0:00.07 rsyslogd (B[m[39;49m[K
+(B[m    194 root      20   0  123440  32328  17724 S   0.0   0.8   0:00.14 unatten+ (B[m[39;49m[K
+(B[m    196 root      20   0    5484   2720   2532 S   0.0   0.1   0:00.00 agetty   (B[m[39;49m[K
+(B[m    209 _chrony   20   0   24572  12044   7156 S   0.0   0.3   0:01.05 chronyd  (B[m[39;49m[K
+(B[m    213 _chrony   20   0   12080   2448   1808 S   0.0   0.1   0:00.03 chronyd  (B[m[39;49m[K
+(B[m    272 root      20   0    3176   1116    980 S   0.0   0.0   0:00.00 Session+ (B[m[39;49m[K[?1l>[25;1H
+[?12l[?25h[Kvipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ htop
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux |grep sleep
+vipul       5903  0.0  0.1  16104  7628 pts/0    T    10:22   0:00 sleep 5000
+vipul       5904  0.0  0.1  16104  7488 pts/0    T    10:22   0:00 sleep 5000
+vipul       5928  0.0  0.0   4120  2408 pts/0    S+   10:22   0:00 grep --color=auto sleep
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ kill -15 5904
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ kill -9 5903
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux |grep sleep
+vipul       5903  0.0  0.0      0     0 pts/0    Z    10:22   0:00 [sleep] <defunct>
+vipul       5904  0.0  0.1  16104  7488 pts/0    T    10:22   0:00 sleep 5000
+vipul       5971  0.0  0.0   4120  2388 pts/0    S+   10:22   0:00 grep --color=auto sleep
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux |grep sleep
+vipul       5903  0.0  0.0      0     0 pts/0    Z    10:22   0:00 [sleep] <defunct>
+vipul       5904  0.0  0.1  16104  7488 pts/0    T    10:22   0:00 sleep 5000
+vipul       5986  0.0  0.0   4120  2424 pts/0    S+   10:22   0:00 grep --color=auto sleep
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux |grep sleep
+vipul       5903  0.0  0.0      0     0 pts/0    Z    10:22   0:00 [sleep] <defunct>
+vipul       5904  0.0  0.1  16104  7488 pts/0    T    10:22   0:00 sleep 5000
+vipul       5997  0.0  0.0   4120  2400 pts/0    S+   10:22   0:00 grep --color=auto sleep
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux |grep sleep
+vipul       5903  0.0  0.0      0     0 pts/0    Z    10:22   0:00 [sleep] <defunct>
+vipul       5904  0.0  0.1  16104  7488 pts/0    T    10:22   0:00 sleep 5000
+vipul       6010  0.0  0.0   4120  2396 pts/0    S+   10:23   0:00 grep --color=auto sleep
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux |grep sleep
+vipul       5903  0.0  0.0      0     0 pts/0    Z    10:22   0:00 [sleep] <defunct>
+vipul       5904  0.0  0.1  16104  7488 pts/0    T    10:22   0:00 sleep 5000
+vipul       6023  0.0  0.0   4120  2416 pts/0    S+   10:23   0:00 grep --color=auto sleep
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux |grep sleep
+vipul       5903  0.0  0.0      0     0 pts/0    Z    10:22   0:00 [sleep] <defunct>
+vipul       5904  0.0  0.1  16104  7488 pts/0    T    10:22   0:00 sleep 5000
+vipul       6036  0.0  0.0   4120  2396 pts/0    S+   10:23   0:00 grep --color=auto sleep
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.3  24348 15316 ?        Ss   08:51   0:00 /sbin/init
+root           2  0.0  0.0   3172  2212 hvc0     Sl+  08:51   0:00 /init
+root           8  0.0  0.0   3172  2044 hvc0     Sl+  08:51   0:00 plan9 --control-socket 8 --log-level 4 --server-fd 9 --pipe-fd 11 --log-truncate
+root          48  0.0  0.5  66788 20296 ?        S<s  08:51   0:00 /usr/lib/systemd/systemd-journald
+systemd+      83  0.0  0.3  22524 14552 ?        Ss   08:51   0:00 /usr/lib/systemd/systemd-resolved
+root          90  0.1  0.3  35108 12180 ?        Ss   08:51   0:08 /usr/lib/systemd/systemd-udevd
+root         122  0.0  0.0   2880  1948 ?        Ss   08:51   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+root         127  0.0  0.0   4464  3096 ?        Ss   08:51   0:00 /usr/sbin/cron -f -P
+message+     133  0.0  0.1   8796  5348 ?        Ss   08:51   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         140  0.0  0.7  44076 29620 ?        Ss   08:51   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         148  0.0  0.2  18576  9460 ?        Ss   08:51   0:00 /usr/lib/systemd/systemd-logind
+syslog       174  0.0  0.1 220532  5520 ?        Ssl  08:51   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         194  0.0  0.8 123440 32328 ?        Ssl  08:51   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         196  0.0  0.0   5484  2720 tty1     Ss+  08:51   0:00 /usr/sbin/agetty --noreset --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - linux
+_chrony      209  0.0  0.3  24572 12044 ?        S    08:51   0:01 /usr/sbin/chronyd -n -F 1 -x
+_chrony      213  0.0  0.0  12080  2448 ?        S    08:51   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         272  0.0  0.0   3176  1116 ?        Ss   08:51   0:00 /init
+root         273  0.0  0.0   3192  1252 ?        S    08:51   0:01 /init
+vipul        278  0.0  0.1   6504  5904 pts/0    Ss   08:51   0:02 -bash
+root         279  0.0  0.1   8632  5568 ?        Ss   08:51   0:00 login -- vipul
+vipul        311  0.0  0.3  22320 13128 ?        Ss   08:51   0:00 /usr/lib/systemd/systemd --user
+vipul        313  0.0  0.1  22896  4088 ?        S    08:51   0:00 (sd-pam)
+vipul        338  0.0  0.1   6128  5416 pts/1    Ss+  08:51   0:00 -bash
+polkitd     4434  0.0  0.2 306436  8296 ?        Ssl  10:01   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+vipul       5641  0.0  0.1   8184  5972 pts/0    T    10:18   0:00 top
+vipul       5902  0.0  0.0   4940  3580 pts/0    T    10:22   0:00 /bin/bash ./test_services.sh
+vipul       5903  0.0  0.0      0     0 pts/0    Z    10:22   0:00 [sleep] <defunct>
+vipul       5904  0.0  0.1  16104  7488 pts/0    T    10:22   0:00 sleep 5000
+root        6041  0.0  0.1  35112  6364 ?        S    10:23   0:00 (udev-worker)
+root        6042  0.0  0.1  35112  6364 ?        S    10:23   0:00 (udev-worker)
+vipul       6048  0.0  0.1   7152  4360 pts/0    R+   10:23   0:00 ps aux
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ ps -ef | grep sleep
+vipul       5903    5902  0 10:22 pts/0    00:00:00 [sleep] <defunct>
+vipul       5904    5902  0 10:22 pts/0    00:00:00 sleep 5000
+vipul       6061     278  0 10:23 pts/0    00:00:00 grep --color=auto sleep
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0   24348  15316  11540 S   0.0   0.4   0:00.84 systemd
+      2 root      20   0    3172   2212   2072 S   0.0   0.1   0:00.01 init-systemd(Ub
+      8 root      20   0    3172   2044   1940 S   0.0   0.1   0:00.00 init
+     48 root      19  -1   66788  20296  18996 S   0.0   0.5   0:00.27 systemd-journal
+     83 systemd+  20   0   22524  14552  11936 S   0.0   0.4   0:00.12 systemd-resolve
+     90 root      20   0   35108  12180   9184 S   0.0   0.3   0:08.38 systemd-udevd
+    122 root      20   0    2880   1948   1824 S   0.0   0.0   0:00.04 chronyd-starter
+    127 root      20   0    4464   3096   2848 S   0.0   0.1   0:00.03 cron
+    133 message+  20   0    8796   5348   4656 S   0.0   0.1   0:00.08 dbus-daemon
+    140 root      20   0   44076  29620  14488 S   0.0   0.7   0:00.16 networkd-dispat
+    148 root      20   0   18576   9460   8180 S   0.0   0.2   0:00.09 systemd-logind
+    174 syslog    20   0  220532   5520   4580 S   0.0   0.1   0:00.07 rsyslogd
+    194 root      20   0  123440  32328  17724 S   0.0   0.8   0:00.14 unattended-upgr
+    196 root      20   0    5484   2720   2532 S   0.0   0.1   0:00.00 agetty
+    209 _chrony   20   0   24572  12044   7156 S   0.0   0.3   0:01.14 chronyd
+    213 _chrony   20   0   12080   2448   1808 S   0.0   0.1   0:00.03 chronyd
+    272 root      20   0    3176   1116    980 S   0.0   0.0   0:00.00 SessionLeader
+    273 root      20   0    3192   1252   1108 S   0.0   0.0   0:01.51 Relay(278)
+    278 vipul     20   0    6504   5904   3976 S   0.0   0.1   0:02.21 bash
+    279 root      20   0    8632   5568   4732 S   0.0   0.1   0:00.00 login
+    311 vipul     20   0   22320  13128  10856 S   0.0   0.3   0:00.24 systemd
+    313 vipul     20   0   22896   4088   2088 S   0.0   0.1   0:00.00 (sd-pam)
+    338 vipul     20   0    6128   5416   3840 S   0.0   0.1   0:00.05 bash
+   4434 polkitd   20   0  306436   8296   7480 S   0.0   0.2   0:00.10 polkitd
+   5641 vipul     20   0    8184   5972   3876 R   0.0   0.1   0:00.00 top
+   6144 vipul     20   0    4940   3600   3328 T   0.0   0.1   0:00.00 test_services.s
+   6145 vipul     20   0   16104   7680   6456 T   0.0   0.2   0:00.00 sleep
+   6146 vipul     20   0   16104   7596   6372 T   0.0   0.2   0:00.00 sleep
+   6208 root      20   0   35112   6364   3332 S   0.0   0.2   0:00.00 (udev-worker)
+   6209 root      20   0   35112   6364   3332 S   0.0   0.2   0:00.00 (udev-worker)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1]+  Stopped                    top
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ fg 3
+-bash: fg: warning: 3: job specification requires leading `%'
+./test_services.sh
+^Z
+[3]+  Stopped                    ./test_services.sh
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ jobs
+[1]-  Stopped                    top
+[3]+  Stopped                    ./test_services.sh
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$ uptime
+ 10:25:45 up  3:39,  1 user,  load average: 0.07, 0.04, 0.01
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Linux$
+
