@@ -1,0 +1,741 @@
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ping www.google.com
+PING www.google.com (142.251.152.119) 56(84) bytes of data.
+64 bytes from 142.251.152.119: icmp_seq=1 ttl=112 time=38.4 ms
+64 bytes from 142.251.152.119: icmp_seq=2 ttl=112 time=21.7 ms
+64 bytes from 142.251.152.119: icmp_seq=3 ttl=112 time=21.5 ms
+64 bytes from 142.251.152.119: icmp_seq=4 ttl=112 time=41.7 ms
+64 bytes from 142.251.152.119: icmp_seq=5 ttl=112 time=36.9 ms
+64 bytes from 142.251.152.119: icmp_seq=6 ttl=112 time=52.4 ms
+^C
+--- www.google.com ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5009ms
+rtt min/avg/max/mdev = 21.544/35.451/52.416/10.950 ms
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ip ioam
+Usage:  ip ioam { COMMAND | help }
+        ip ioam namespace show
+        ip ioam namespace add ID [ data DATA32 ] [ wide DATA64 ]
+        ip ioam namespace del ID
+        ip ioam schema show
+        ip ioam schema add ID DATA
+        ip ioam schema del ID
+        ip ioam namespace set ID schema { ID | none }
+        ip ioam monitor
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ip tcpmetrics
+185.125.190.122 age 654.984sec cwnd 10 rtt 185978us rttvar 185978us source 192..22.7.53
+91.189.91.113 age 654.484sec cwnd 10 rtt 294909us rttvar 294909us source 192..22.7.53
+23.212.55.57 age 691.880sec cwnd 10 rtt 24754us rttvar 24754us source 192..22.7.53
+185.125.190.123 age 655.040sec cwnd 10 rtt 173870us rttvar 173870us source 192..22.7.53
+91.189.91.112 age 654.484sec cwnd 10 rtt 288945us rttvar 288945us source 192..22.7.53
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ip route
+default via 192.24.0.1 dev eth0 proto kernel
+192.24.0.0/20 dev eth0 proto kernel scope link src 192..22.7.53
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ip ntable
+inet arp_cache
+    thresh1 128 thresh2 512 thresh3 1024 gc_int 30000
+    refcnt 1 reachable 38888 base_reachable 30000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 101
+    app_probes 0 ucast_probes 3 mcast_probes 3 mcast_reprobes 0
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+
+inet arp_cache
+    dev eth0
+    refcnt 2 reachable 37772 base_reachable 30000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 101
+    app_probes 0 ucast_probes 3 mcast_probes 3 mcast_reprobes 0
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+
+inet arp_cache
+    dev *
+    refcnt 1 reachable 35804 base_reachable 30000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 101
+    app_probes 0 ucast_probes 3 mcast_probes 3 mcast_reprobes 0
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+
+inet arp_cache
+    dev lo
+    refcnt 2 reachable 29920 base_reachable 30000 retrans 1000
+    gc_stale 60000 delay_probe 5000 queue 101
+    app_probes 0 ucast_probes 3 mcast_probes 3 mcast_reprobes 0
+    anycast_delay 1000 proxy_delay 800 proxy_queue 64 locktime 1000
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ip r
+default via 192.24.0.1 dev eth0 proto kernel
+192.24.0.0/20 dev eth0 proto kernel scope link src 192..22.7.53
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ip -V
+ip utility, iproute2-6.19.0, libbpf 1.6.3
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ip ioam
+Usage:  ip ioam { COMMAND | help }
+        ip ioam namespace show
+        ip ioam namespace add ID [ data DATA32 ] [ wide DATA64 ]
+        ip ioam namespace del ID
+        ip ioam schema show
+        ip ioam schema add ID DATA
+        ip ioam schema del ID
+        ip ioam namespace set ID schema { ID | none }
+        ip ioam monitor
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ip route
+default via 192.24.0.1 dev eth0 proto kernel
+192.24.0.0/20 dev eth0 proto kernel scope link src 192..22.7.53
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ netstat
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 192..22.7.53:38224       192.66.152.176:http     TIME_WAIT
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  3      [ ]         STREAM     CONNECTED     5158
+unix  3      [ ]         STREAM     CONNECTED     4875     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     5382
+unix  3      [ ]         STREAM     CONNECTED     6148     /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     252
+unix  3      [ ]         STREAM     CONNECTED     5263
+unix  3      [ ]         SEQPACKET  CONNECTED     6161
+unix  2      [ ]         DGRAM      CONNECTED     6624
+unix  3      [ ]         STREAM     CONNECTED     6293
+unix  3      [ ]         STREAM     CONNECTED     4073
+unix  2      [ ]         DGRAM      CONNECTED     6635
+unix  3      [ ]         STREAM     CONNECTED     4866
+unix  3      [ ]         STREAM     CONNECTED     5159     /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM      CONNECTED     6658
+unix  2      [ ]         DGRAM                    6655     /run/user/1000/systemd/notify
+unix  3      [ ]         STREAM     CONNECTED     203
+unix  2      [ ]         DGRAM                    83       /var/run/chrony/chronyd.sock
+unix  3      [ ]         STREAM     CONNECTED     4862
+unix  3      [ ]         STREAM     CONNECTED     3143     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     204
+unix  3      [ ]         STREAM     CONNECTED     6278     /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM      CONNECTED     6661
+unix  3      [ ]         STREAM     CONNECTED     4979     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     4777     /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM      CONNECTED     6151
+unix  3      [ ]         STREAM     CONNECTED     4776
+unix  3      [ ]         STREAM     CONNECTED     2658
+unix  3      [ ]         STREAM     CONNECTED     4863     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     250
+unix  3      [ ]         STREAM     CONNECTED     5384
+unix  3      [ ]         SEQPACKET  CONNECTED     6160
+unix  3      [ ]         DGRAM      CONNECTED     6656
+unix  3      [ ]         STREAM     CONNECTED     5262
+unix  3      [ ]         STREAM     CONNECTED     4727     /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM      CONNECTED     6657
+unix  3      [ ]         STREAM     CONNECTED     3928
+unix  3      [ ]         STREAM     CONNECTED     5266     /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM      CONNECTED     6660
+unix  3      [ ]         STREAM     CONNECTED     251
+unix  3      [ ]         STREAM     CONNECTED     6292
+unix  2      [ ]         DGRAM      CONNECTED     4937
+unix  3      [ ]         DGRAM      CONNECTED     2241     /run/systemd/notify
+unix  2      [ ]         DGRAM      CONNECTED     11159
+unix  3      [ ]         DGRAM      CONNECTED     6659
+unix  3      [ ]         STREAM     CONNECTED     253
+unix  3      [ ]         STREAM     CONNECTED     3830     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     11162    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    2264     /run/systemd/journal/syslog
+unix  3      [ ]         STREAM     CONNECTED     5387
+unix  8      [ ]         DGRAM      CONNECTED     2268     /run/systemd/journal/dev-log
+unix  3      [ ]         STREAM     CONNECTED     960
+unix  7      [ ]         DGRAM      CONNECTED     2269     /run/systemd/journal/socket
+unix  2      [ ]         DGRAM                    6159     /run/chrony/chronyd.sock
+unix  3      [ ]         STREAM     CONNECTED     5385
+unix  3      [ ]         STREAM     CONNECTED     6286     /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     3829
+unix  3      [ ]         STREAM     CONNECTED     3139     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     10166
+unix  3      [ ]         STREAM     CONNECTED     5265     /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     3883
+unix  3      [ ]         STREAM     CONNECTED     1776
+unix  3      [ ]         DGRAM      CONNECTED     2247
+unix  3      [ ]         STREAM     CONNECTED     1867
+unix  2      [ ]         DGRAM      CONNECTED     5253
+unix  3      [ ]         STREAM     CONNECTED     6613
+unix  2      [ ]         DGRAM      CONNECTED     3077
+unix  3      [ ]         DGRAM      CONNECTED     2245
+unix  3      [ ]         STREAM     CONNECTED     1814
+unix  3      [ ]         DGRAM      CONNECTED     10168
+unix  3      [ ]         STREAM     CONNECTED     11158
+unix  3      [ ]         STREAM     CONNECTED     1813
+unix  2      [ ]         DGRAM      CONNECTED     2473
+unix  3      [ ]         STREAM     CONNECTED     10155    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM      CONNECTED     10167
+unix  3      [ ]         DGRAM      CONNECTED     2242
+unix  3      [ ]         STREAM     CONNECTED     2007
+unix  3      [ ]         DGRAM      CONNECTED     2244
+unix  3      [ ]         DGRAM      CONNECTED     2246
+unix  2      [ ]         DGRAM      CONNECTED     828
+unix  3      [ ]         STREAM     CONNECTED     1775
+unix  3      [ ]         STREAM     CONNECTED     5687     /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM      CONNECTED     5259
+unix  2      [ ]         STREAM     CONNECTED     1800
+unix  3      [ ]         STREAM     CONNECTED     6666     /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     3111
+unix  3      [ ]         DGRAM      CONNECTED     2243
+unix  3      [ ]         STREAM     CONNECTED     1998     /tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     391      /tmp/dbus-9LAnSWA6lX
+unix  2      [ ]         DGRAM                    3082     @821096230356767359
+unix  3      [ ]         STREAM     CONNECTED     6663     @1d39ddb9987119d7/bus/systemd/bus-system
+unix  3      [ ]         STREAM     CONNECTED     6145     @3fc5170becebcb30/bus/systemd/bus-api-system
+unix  3      [ ]         STREAM     CONNECTED     4986     @3747eb116a8bc17/bus/systemd-logind/system
+unix  3      [ ]         STREAM     CONNECTED     3808     @b019e1f22382bef/bus/systemd-resolve/bus-api-resolve
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ netstat -anlp
+(No info could be read for "-p": geteuid()=1000 but you should be root.)
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.54:53           0.0.0.0:*               LISTEN      -
+tcp        0      0 10.255.255.254:53       0.0.0.0:*               LISTEN      -
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -
+tcp        0      0 192..22.7.53:38224       192.66.152.176:80       TIME_WAIT   -
+udp        0      0 127.0.0.54:53           0.0.0.0:*                           -
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           -
+udp        0      0 10.255.255.254:53       0.0.0.0:*                           -
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           -
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           -
+udp6       0      0 ::1:323                 :::*                                -
+udp6       0      0 ::1:323                 :::*                                -
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   PID/Program name     Path
+unix  3      [ ]         STREAM     CONNECTED     5158     -
+unix  3      [ ]         STREAM     CONNECTED     4875     -                    /run/systemd/journal/stdout
+unix  2      [ ACC ]     STREAM     LISTENING     164      -                    /run/WSL/2_interop
+unix  2      [ ACC ]     STREAM     LISTENING     138      -                    /run/WSL/1_interop
+unix  3      [ ]         STREAM     CONNECTED     5382     -
+unix  2      [ ACC ]     SEQPACKET  LISTENING     1747     -                    /mnt/wslg/weston-notify.sock
+unix  3      [ ]         STREAM     CONNECTED     6148     -                    /run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     200      -                    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     252      -
+unix  3      [ ]         STREAM     CONNECTED     5263     -
+unix  2      [ ACC ]     STREAM     LISTENING     150      -                    /mnt/wslg/runtime-dir/wayland-0
+unix  3      [ ]         SEQPACKET  CONNECTED     6161     -
+unix  2      [ ]         DGRAM      CONNECTED     6624     -
+unix  2      [ ACC ]     STREAM     LISTENING     166      -                    /tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     6293     -
+unix  3      [ ]         STREAM     CONNECTED     4073     -
+unix  2      [ ]         DGRAM      CONNECTED     6635     -
+unix  2      [ ACC ]     STREAM     LISTENING     222      -                    /mnt/wslg/runtime-dir/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     4866     -
+unix  3      [ ]         STREAM     CONNECTED     5159     -                    /run/systemd/journal/stdout
+unix  2      [ ACC ]     STREAM     LISTENING     2006     -                    /mnt/wslg/PulseServer
+unix  3      [ ]         DGRAM      CONNECTED     6658     -
+unix  2      [ ]         DGRAM                    6655     -                    /run/user/1000/systemd/notify
+unix  3      [ ]         STREAM     CONNECTED     203      -
+unix  2      [ ACC ]     STREAM     LISTENING     6662     -                    /run/user/1000/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     5731     -                    /mnt/wslg/PulseAudioRDPSource
+unix  2      [ ]         DGRAM                    83       -                    /var/run/chrony/chronyd.sock
+unix  2      [ ACC ]     STREAM     LISTENING     6664     -                    /run/user/1000/systemd/io.systemd.Manager
+unix  3      [ ]         STREAM     CONNECTED     4862     -
+unix  2      [ ACC ]     STREAM     LISTENING     5921     -                    /mnt/wslg/PulseAudioRDPSink
+unix  2      [ ACC ]     STREAM     LISTENING     6675     -                    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     3143     -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     204      -
+unix  2      [ ACC ]     STREAM     LISTENING     5739     -                    /run/user/1000/gnupg/S.dirmngr
+unix  2      [ ACC ]     STREAM     LISTENING     5740     -                    /run/user/1000/gnupg/S.gpg-agent.browser
+unix  3      [ ]         STREAM     CONNECTED     6278     -                    /run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     5741     -                    /run/user/1000/gnupg/S.gpg-agent.extra
+unix  3      [ ]         DGRAM      CONNECTED     6661     -
+unix  2      [ ACC ]     STREAM     LISTENING     5742     -                    /run/user/1000/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     5751     -                    /run/user/1000/gnupg/S.gpg-agent
+unix  3      [ ]         STREAM     CONNECTED     4979     -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     4777     -                    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM      CONNECTED     6151     -
+unix  3      [ ]         STREAM     CONNECTED     4776     -
+unix  2      [ ACC ]     STREAM     LISTENING     5758     -                    /run/user/1000/gnupg/S.keyboxd
+unix  2      [ ACC ]     STREAM     LISTENING     5759     -                    /run/user/1000/pk-debconf-socket
+unix  3      [ ]         STREAM     CONNECTED     2658     -
+unix  2      [ ACC ]     STREAM     LISTENING     5760     -                    /run/user/1000/snapd-session-agent.socket
+unix  3      [ ]         STREAM     CONNECTED     4863     -                    /run/systemd/journal/stdout
+unix  2      [ ACC ]     STREAM     LISTENING     5761     -                    /run/user/1000/openssh_agent
+unix  3      [ ]         STREAM     CONNECTED     250      -
+unix  2      [ ACC ]     STREAM     LISTENING     6712     -                    /run/user/1000/systemd/io.systemd.AskPassword
+unix  3      [ ]         STREAM     CONNECTED     5384     -
+unix  3      [ ]         SEQPACKET  CONNECTED     6160     -
+unix  3      [ ]         DGRAM      CONNECTED     6656     -
+unix  3      [ ]         STREAM     CONNECTED     5262     -
+unix  3      [ ]         STREAM     CONNECTED     4727     -                    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM      CONNECTED     6657     -
+unix  3      [ ]         STREAM     CONNECTED     3928     -
+unix  2      [ ACC ]     STREAM     LISTENING     199      -                    /tmp/dbus-9LAnSWA6lX
+unix  3      [ ]         STREAM     CONNECTED     5266     -                    /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM      CONNECTED     6660     -
+unix  3      [ ]         STREAM     CONNECTED     251      -
+unix  3      [ ]         STREAM     CONNECTED     6292     -
+unix  2      [ ]         DGRAM      CONNECTED     4937     -
+unix  2      [ ACC ]     STREAM     LISTENING     503      -                    /run/WSL/143_interop
+unix  3      [ ]         DGRAM      CONNECTED     2241     -                    /run/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     2248     -                    /run/systemd/private
+unix  2      [ ]         DGRAM      CONNECTED     11159    -
+unix  3      [ ]         DGRAM      CONNECTED     6659     -
+unix  3      [ ]         STREAM     CONNECTED     253      -
+unix  2      [ ACC ]     STREAM     LISTENING     2249     -                    /run/systemd/userdb/io.systemd.DynamicUser
+unix  3      [ ]         STREAM     CONNECTED     3830     -                    /run/systemd/journal/stdout
+unix  2      [ ACC ]     STREAM     LISTENING     2250     -                    /run/systemd/io.systemd.ManagedOOM
+unix  2      [ ACC ]     STREAM     LISTENING     2251     -                    /run/systemd/io.systemd.Manager
+unix  3      [ ]         STREAM     CONNECTED     11162    -                    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    2264     -                    /run/systemd/journal/syslog
+unix  2      [ ACC ]     STREAM     LISTENING     2265     -                    /run/systemd/io.systemd.AskPassword
+unix  2      [ ACC ]     STREAM     LISTENING     2266     -                    /run/systemd/io.systemd.Credentials
+unix  2      [ ACC ]     STREAM     LISTENING     2267     -                    /run/systemd/io.systemd.FactoryReset
+unix  3      [ ]         STREAM     CONNECTED     5387     -
+unix  8      [ ]         DGRAM      CONNECTED     2268     -                    /run/systemd/journal/dev-log
+unix  3      [ ]         STREAM     CONNECTED     960      -
+unix  7      [ ]         DGRAM      CONNECTED     2269     -                    /run/systemd/journal/socket
+unix  2      [ ]         DGRAM                    6159     -                    /run/chrony/chronyd.sock
+unix  2      [ ACC ]     STREAM     LISTENING     2270     -                    /run/systemd/journal/stdout
+unix  2      [ ACC ]     STREAM     LISTENING     2271     -                    /run/systemd/io.systemd.MuteConsole
+unix  2      [ ACC ]     STREAM     LISTENING     2272     -                    /run/systemd/resolve/io.systemd.Resolve.Monitor
+unix  2      [ ACC ]     STREAM     LISTENING     2273     -                    /run/systemd/resolve/io.systemd.Resolve
+unix  2      [ ACC ]     SEQPACKET  LISTENING     2274     -                    /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     2276     -                    /run/udev/io.systemd.Udev
+unix  3      [ ]         STREAM     CONNECTED     5385     -
+unix  3      [ ]         STREAM     CONNECTED     6286     -                    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     3829     -
+unix  3      [ ]         STREAM     CONNECTED     3139     -                    /run/systemd/journal/stdout
+unix  2      [ ACC ]     STREAM     LISTENING     825      -                    /run/systemd/journal/io.systemd.journal
+unix  3      [ ]         STREAM     CONNECTED     10166    -
+unix  3      [ ]         STREAM     CONNECTED     5265     -                    /run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     2606     -                    /run/systemd/io.systemd.sysext
+unix  2      [ ]         DGRAM      CONNECTED     3883     -
+unix  3      [ ]         STREAM     CONNECTED     1776     -
+unix  3      [ ]         DGRAM      CONNECTED     2247     -
+unix  3      [ ]         STREAM     CONNECTED     1867     -
+unix  2      [ ]         DGRAM      CONNECTED     5253     -
+unix  3      [ ]         STREAM     CONNECTED     6613     -
+unix  2      [ ]         DGRAM      CONNECTED     3077     -
+unix  3      [ ]         DGRAM      CONNECTED     2245     -
+unix  2      [ ACC ]     STREAM     LISTENING     4556     -                    /run/apport.socket
+unix  3      [ ]         STREAM     CONNECTED     1814     -
+unix  2      [ ACC ]     STREAM     LISTENING     4557     -                    /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM      CONNECTED     10168    -
+unix  3      [ ]         STREAM     CONNECTED     11158    -
+unix  2      [ ACC ]     STREAM     LISTENING     4559     -                    /run/polkit/agent-helper.socket
+unix  2      [ ACC ]     STREAM     LISTENING     4560     -                    /run/snapd.socket
+unix  3      [ ]         STREAM     CONNECTED     1813     -
+unix  2      [ ACC ]     STREAM     LISTENING     4561     -                    /run/snapd-snap.socket
+unix  2      [ ACC ]     STREAM     LISTENING     4562     -                    /run/systemd/io.systemd.Hostname
+unix  2      [ ACC ]     STREAM     LISTENING     4563     -                    /run/systemd/io.systemd.Login
+unix  2      [ ]         DGRAM      CONNECTED     2473     -
+unix  3      [ ]         STREAM     CONNECTED     10155    -                    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM      CONNECTED     10167    -
+unix  3      [ ]         DGRAM      CONNECTED     2242     -
+unix  3      [ ]         STREAM     CONNECTED     2007     -
+unix  3      [ ]         DGRAM      CONNECTED     2244     -
+unix  3      [ ]         DGRAM      CONNECTED     2246     -
+unix  2      [ ]         DGRAM      CONNECTED     828      -
+unix  3      [ ]         STREAM     CONNECTED     1775     -
+unix  3      [ ]         STREAM     CONNECTED     5687     -                    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM      CONNECTED     5259     -
+unix  2      [ ]         STREAM     CONNECTED     1800     -
+unix  3      [ ]         STREAM     CONNECTED     6666     -                    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM      CONNECTED     3111     -
+unix  3      [ ]         DGRAM      CONNECTED     2243     -
+unix  3      [ ]         STREAM     CONNECTED     1998     -                    /tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     391      -                    /tmp/dbus-9LAnSWA6lX
+unix  2      [ ]         DGRAM                    3082     -                    @821096230356767359
+unix  3      [ ]         STREAM     CONNECTED     6663     -                    @1d39ddb9987119d7/bus/systemd/bus-system
+unix  3      [ ]         STREAM     CONNECTED     6145     -                    @3fc5170becebcb30/bus/systemd/bus-api-system
+unix  3      [ ]         STREAM     CONNECTED     4986     -                    @3747eb116a8bc17/bus/systemd-logind/system
+unix  3      [ ]         STREAM     CONNECTED     3808     -                    @b019e1f22382bef/bus/systemd-resolve/bus-api-resolve
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ netstat -tunlp
+(No info could be read for "-p": geteuid()=1000 but you should be root.)
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.54:53           0.0.0.0:*               LISTEN      -
+tcp        0      0 10.255.255.254:53       0.0.0.0:*               LISTEN      -
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -
+udp        0      0 127.0.0.54:53           0.0.0.0:*                           -
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           -
+udp        0      0 10.255.255.254:53       0.0.0.0:*                           -
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           -
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           -
+udp6       0      0 ::1:323                 :::*                                -
+udp6       0      0 ::1:323                 :::*                                -
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ss
+Netid            State               Recv-Q             Send-Q                                                                Local Address:Port                               Peer Address:Port
+u_str            ESTAB               0                  0                                                                                 * 5158                                          * 5159
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 4875                                          * 4866
+u_str            ESTAB               0                  0                                                                                 * 5382                                          * 6278
+u_str            ESTAB               0                  0                                                       /run/dbus/system_bus_socket 6148                                          * 6145
+u_str            ESTAB               0                  0                                                                                 * 252                                           * 253
+u_str            ESTAB               0                  0                                                                                 * 5263                                          * 5262
+u_seq            ESTAB               0                  0                                                                                 * 6161                                          * 6160
+u_dgr            ESTAB               0                  0                                                                                 * 6624                                          * 2268
+u_str            ESTAB               0                  0                                                                                 * 6293                                          * 6292
+u_str            ESTAB               0                  0                                                                                 * 4073                                          * 4979
+u_dgr            ESTAB               0                  0                                                                                 * 6635                                          * 2269
+u_str            ESTAB               0                  0                                                                                 * 4866                                          * 4875
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 5159                                          * 5158
+u_dgr            ESTAB               0                  0                                                                                 * 6658                                          * 6659
+u_str            ESTAB               0                  0                                                                                 * 203                                           * 204
+u_str            ESTAB               0                  0                                                                                 * 4862                                          * 4863
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 3143                                          * 2658
+u_str            ESTAB               0                  0                                                                                 * 204                                           * 203
+u_str            ESTAB               0                  0                                                       /run/dbus/system_bus_socket 6278                                          * 5382
+u_dgr            ESTAB               0                  0                                                                                 * 6661                                          * 6660
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 4979                                          * 4073
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 4777                                          * 4776
+u_dgr            ESTAB               0                  0                                                                                 * 6151                                          * 2268
+u_str            ESTAB               0                  0                                                                                 * 4776                                          * 4777
+u_str            ESTAB               0                  0                                                                                 * 2658                                          * 3143
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 4863                                          * 4862
+u_str            ESTAB               0                  0                                                                                 * 250                                           * 251
+u_str            ESTAB               0                  0                                                                                 * 5384                                          * 5385
+u_seq            ESTAB               0                  0                                                                                 * 6160                                          * 6161
+u_dgr            ESTAB               0                  0                                                                                 * 6656                                          * 6657
+u_str            ESTAB               0                  0                                                                                 * 5262                                          * 5263
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 4727                                          * 3928
+u_dgr            ESTAB               0                  0                                                                                 * 6657                                          * 6656
+u_str            ESTAB               0                  0                                                                                 * 3928                                          * 4727
+u_str            ESTAB               0                  0                                                       /run/dbus/system_bus_socket 5266                                          * 4986
+u_dgr            ESTAB               0                  0                                                                                 * 6660                                          * 6661
+u_str            ESTAB               0                  0                                                                                 * 251                                           * 250
+u_str            ESTAB               0                  0                                                                                 * 6292                                          * 6293
+u_dgr            ESTAB               0                  0                                                                                 * 4937                                          * 2269
+u_dgr            ESTAB               0                  0                                                               /run/systemd/notify 2241                                          * 0
+u_dgr            ESTAB               0                  0                                                                                 * 11159                                         * 2268
+u_dgr            ESTAB               0                  0                                                                                 * 6659                                          * 6658
+u_str            ESTAB               0                  0                                                                                 * 253                                           * 252
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 3830                                          * 3829
+u_str            ESTAB               0                  0                                                       /run/dbus/system_bus_socket 11162                                         * 10166
+u_str            ESTAB               0                  0                                                                                 * 5387                                          * 6286
+u_dgr            ESTAB               0                  0                                                      /run/systemd/journal/dev-log 2268                                          * 0
+u_str            ESTAB               0                  0                                                                                 * 960                                           * 3139
+u_dgr            ESTAB               0                  0                                                       /run/systemd/journal/socket 2269                                          * 0
+u_str            ESTAB               0                  0                                                                                 * 5385                                          * 5384
+u_str            ESTAB               0                  0                                                       /run/dbus/system_bus_socket 6286                                          * 5387
+u_str            ESTAB               0                  0                                                                                 * 3829                                          * 3830
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 3139                                          * 960
+u_str            ESTAB               0                  0                                                                                 * 10166                                         * 11162
+u_str            ESTAB               0                  0                                                       /run/dbus/system_bus_socket 5265                                          * 3808
+u_dgr            ESTAB               0                  0                                                                                 * 3883                                          * 2268
+u_str            ESTAB               0                  0                                                                                 * 1776                                          * 1775
+u_dgr            ESTAB               0                  0                                                                                 * 2247                                          * 2246
+u_str            ESTAB               0                  0                                                                                 * 1867                                          * 1998
+u_dgr            ESTAB               0                  0                                                                                 * 5253                                          * 2268
+u_str            ESTAB               0                  0                                                                                 * 6613                                          * 5687
+u_dgr            ESTAB               0                  0                                                                                 * 3077                                          * 2269
+u_dgr            ESTAB               0                  0                                                                                 * 2245                                          * 2244
+u_str            ESTAB               0                  0                                                                                 * 1814                                          * 1813
+u_dgr            ESTAB               0                  768                                                                               * 10168                                         * 10167
+u_str            ESTAB               0                  0                                                                                 * 11158                                         * 10155
+u_str            ESTAB               0                  0                                                                                 * 1813                                          * 1814
+u_dgr            ESTAB               0                  0                                                                                 * 2473                                          * 2269
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 10155                                         * 11158
+u_dgr            ESTAB               0                  0                                                                                 * 10167                                         * 10168
+u_dgr            ESTAB               0                  0                                                                                 * 2242                                          * 2243
+u_str            ESTAB               0                  0                                                                                 * 2007                                          * 391
+u_dgr            ESTAB               0                  0                                                                                 * 2244                                          * 2245
+u_dgr            ESTAB               0                  0                                                                                 * 2246                                          * 2247
+u_dgr            ESTAB               0                  0                                                                                 * 828                                           * 2241
+u_str            ESTAB               0                  0                                                                                 * 1775                                          * 1776
+u_str            ESTAB               0                  0                                                       /run/systemd/journal/stdout 5687                                          * 6613
+u_dgr            ESTAB               0                  0                                                                                 * 5259                                          * 2268
+u_str            ESTAB               0                  0                                                                                 * 1800                                          * 0
+u_str            ESTAB               0                  0                                                       /run/dbus/system_bus_socket 6666                                          * 6663
+u_dgr            ESTAB               0                  0                                                                                 * 3111                                          * 2269
+u_dgr            ESTAB               0                  0                                                                                 * 2243                                          * 2242
+u_str            ESTAB               0                  0                                                                 /tmp/.X11-unix/X0 1998                                          * 1867
+u_str            ESTAB               0                  0                                                              /tmp/dbus-9LAnSWA6lX 391                                           * 2007
+u_str            ESTAB               0                  0                                          @1d39ddb9987119d7/bus/systemd/bus-system 6663                                          * 6666
+u_str            ESTAB               0                  0                                      @3fc5170becebcb30/bus/systemd/bus-api-system 6145                                          * 6148
+u_str            ESTAB               0                  0                                        @3747eb116a8bc17/bus/systemd-logind/system 4986                                          * 5266
+u_str            ESTAB               0                  0                              @b019e1f22382bef/bus/systemd-resolve/bus-api-resolve 3808                                          * 5265
+v_str            ESTAB               0                  0                                                                                 *:2702110557                                    2:50000
+v_str            ESTAB               0                  0                                                                                 *:2702110558                                    2:50000
+v_str            ESTAB               0                  0                                                                                 *:2702110559                                    2:50000
+v_str            ESTAB               0                  0                                                                                 *:2702110560                                    2:50000
+v_str            ESTAB               0                  0                                                                                 *:2702110561                                    2:50000
+v_str            ESTAB               0                  0                                                                                 *:2702110563                                    2:50001
+v_str            ESTAB               0                  0                                                                                 *:2702110564                                    2:50001
+v_str            ESTAB               0                  0                                                                                 *:2702110565                                    2:50001
+v_str            ESTAB               0                  0                                                                                 *:2702110567                                    2:50000
+v_str            ESTAB               0                  0                                                                                 *:2702110568                                    2:50000
+v_str            ESTAB               0                  0                                                                                 *:2702110569                                    2:50002
+v_str            ESTAB               0                  0                                                                                 *:2702110570                                    2:50002
+v_str            ESTAB               0                  0                                                                                 *:2702110571                                    2:50002
+v_str            ESTAB               0                  0                                                                                 *:2702110573                                    2:50002
+v_str            ESTAB               0                  0                                                                                 *:2702110574                                    2:50002
+v_str            ESTAB               0                  0                                                                                 *:2702110575                                    2:50002
+v_str            ESTAB               0                  0                                                                                 *:1                                             2:107452581
+v_str            ESTAB               0                  0                                                                                 *:2702110566                                    2:107452550
+v_str            ESTAB               0                  0                                                                                 *:2702110572                                    2:107452552
+v_str            ESTAB               0                  0                                                                                 *:2702110578                                    2:107452561
+v_str            ESTAB               0                  0                                                                                 *:2702110578                                    2:107452560
+v_str            ESTAB               0                  0                                                                                 *:2702110578                                    2:107452559
+v_str            CLOSING             0                  0                                                                                 *:2702110578                                    2:107452558
+v_str            ESTAB               0                  0                                                                                 *:2702110579                                    2:107452568
+v_str            ESTAB               0                  0                                                                                 *:2702110577                                    2:107452555
+v_str            ESTAB               0                  0                                                                                 *:2702110580                                    2:107452573
+v_str            ESTAB               0                  0                                                                                 *:2702110580                                    2:107452572
+v_str            ESTAB               0                  0                                                                                 *:2702110580                                    2:107452571
+v_str            ESTAB               0                  0                                                                                 *:2702110580                                    2:107452570
+v_str            ESTAB               0                  0                                                                                 *:2702110580                                    2:107452569
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ traceroute google.com
+Command 'traceroute' not found, but can be installed with:
+sudo apt install inetutils-traceroute  # version 2:2.7-2ubuntu1, or
+sudo apt install traceroute            # version 1:2.1.6-1build1
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo apt install inetutils-traceroute  # version 2:2.7-2ubuntu1, or
+sudo apt install traceroute            # version 1:2.1.6-1build1
+Installing:
+  inetutils-traceroute
+
+Summary:
+  Upgrading: 0, Installing: 1, Removing: 0, Not Upgrading: 4
+  Download size: 43.7 kB
+  Space needed: 116 kB / 1024 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute/universe amd64 inetutils-traceroute amd64 2:2.7-2ubuntu1 [43.7 kB]
+Fetched 43.7 kB in 1s (41.6 kB/s)
+Selecting previously unselected package inetutils-traceroute.
+(Reading database ... 36355 files and directories currently installed.)
+Preparing to unpack .../inetutils-traceroute_2%3a2.7-2ubuntu1_amd64.deb ...
+Unpacking inetutils-traceroute (2:2.7-2ubuntu1) ...
+Setting up inetutils-traceroute (2:2.7-2ubuntu1) ...
+update-alternatives: using /usr/bin/inetutils-traceroute to provide /usr/bin/traceroute (traceroute) in auto mode
+Processing triggers for man-db (2.13.1-1build1) ...
+Installing:
+  traceroute
+
+Summary:
+  Upgrading: 0, Installing: 1, Removing: 0, Not Upgrading: 4
+  Download size: 54.4 kB
+  Space needed: 167 kB / 1024 GB available
+
+Get:1 http://archive.ubuntu.com/ubuntu resolute/universe amd64 traceroute amd64 1:2.1.6-1build1 [54.4 kB]
+Fetched 54.4 kB in 0s (181 kB/s)
+Selecting previously unselected package traceroute.
+(Reading database ... 36364 files and directories currently installed.)
+Preparing to unpack .../traceroute_1%3a2.1.6-1build1_amd64.deb ...
+Unpacking traceroute (1:2.1.6-1build1) ...
+Setting up traceroute (1:2.1.6-1build1) ...
+update-alternatives: using /usr/bin/traceroute6.db to provide /usr/bin/traceroute6 (traceroute6) in auto mode
+update-alternatives: using /usr/bin/lft.db to provide /usr/bin/lft (lft) in auto mode
+update-alternatives: using /usr/bin/traceproto.db to provide /usr/bin/traceproto (traceproto) in auto mode
+update-alternatives: using /usr/sbin/tcptraceroute.db to provide /usr/sbin/tcptraceroute (tcptraceroute) in auto mode
+Processing triggers for man-db (2.13.1-1build1) ...
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ traceroute google.com
+traceroute to google.com (142.251.43.174), 64 hops max
+  1   192.24.0.1  0.637ms  0.508ms  0.385ms
+  2   10.174.75.126  2.887ms  2.423ms  4.214ms
+  3   *  *  *
+
+  4   * ^C
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ip addr show eth0
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1400 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:2a:0a:fd brd ff:ff:ff:ff:ff:ff
+    altname enx00155d2a0afd
+    inet ip1/20 brd ip2 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe2a:afd/64 scope link proto kernel_ll
+       valid_lft forever preferred_lft forever
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ping 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.042 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.053 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.055 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.044 ms
+^C
+--- 127.0.0.1 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3073ms
+rtt min/avg/max/mdev = 0.042/0.048/0.055/0.005 ms
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ curl -I http://IP:3000
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Thu, 28 May 2026 04:27:52 GMT
+ETag: W/"854d-19e6cd6bbf7"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 34125
+Date: Thu, 28 May 2026 06:48:02 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ dig google.com
+
+; <<>> DiG 9.20.18-1ubuntu2.1-Ubuntu <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 7159
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1280
+;; QUESTION SECTION:
+;google.com.                    IN      A
+
+;; ANSWER SECTION:
+google.com.             48      IN      A       142.251.43.174
+
+;; Query time: 179 msec
+;; SERVER: 10.255.255.254#53(10.255.255.254) (UDP)
+;; WHEN: Thu May 28 07:00:37 UTC 2026
+;; MSG SIZE  rcvd: 55
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ host google.com
+google.com has address 142.250.207.142
+google.com has IPv6 address 2404:6800:4002:80b::200e
+google.com mail is handled by 10 smtp.google.com.
+google.com has HTTP service bindings 1 . alpn="h2,h3"
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ nslookup google.com
+Server:         10.255.255.254
+Address:        10.255.255.254#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 172.217.24.238
+Name:   google.com
+Address: 2404:6800:4002:80b::200e
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo service ssh start
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo service ssh status
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: active (running) since Thu 2026-05-28 07:05:26 UTC; 11s ago
+ Invocation: 6616230479e24a7bb4374b98532cef8b
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 3901 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 3904 (sshd)
+      Tasks: 1 (limit: 4689)
+     Memory: 1.2M (peak: 2.2M)
+        CPU: 22ms
+     CGroup: /system.slice/ssh.service
+             └─3904 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+May 28 07:05:26 VsHostname systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+May 28 07:05:26 VsHostname sshd[3904]: Server listening on 0.0.0.0 port 22.
+May 28 07:05:26 VsHostname sshd[3904]: Server listening on :: port 22.
+May 28 07:05:26 VsHostname systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ssh vipul@localhost
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ED25519 key fingerprint is: SHA256:SGJmunfS5r33sRzg65t/HtKJoCr1ZfQ1vXaAOYjdKT0
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'localhost' (ED25519) to the list of known hosts.
+vipul@localhost's password:
+Welcome to Ubuntu 26.04 LTS (GNU/Linux 6.6.114.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://docs.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu May 28 07:05:53 UTC 2026
+
+  System load:  0.53                Processes:             35
+  Usage of /:   0.2% of 1006.85GB   Users logged in:       0
+  Memory usage: 9%                  IPv4 address for eth0: 172.24.9.71
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+vipul@VsHostname:~$
+vipul@VsHostname:~$ exit
+logout
+Connection to localhost closed.
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ vi
+README.md                networking_commands.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sudo firewall-cmd --list-all
+public (default, active)
+  target: default
+  ingress-priority: 0
+  egress-priority: 0
+  icmp-block-inversion: no
+  interfaces:
+  sources:
+  services: dhcpv6-client ssh
+  ports:
+  protocols:
+  forward: yes
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Debugging$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Debugging$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Debugging$ pwd
+/home/vipul/workspace/MyProjects/Infra_Automation/Debugging
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Debugging$ ls -ltrh
+total 0
+-rw-r--r-- 1 vipul vipul 0 May 24 10:01 README.md
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Debugging$ cd ../Networking/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ls
+README.md  networking_commands.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ rsync -v networking_commands.txt . ../Debugging/
+skipping directory .
+networking_commands.txt
+
+sent 58,053 bytes  received 35 bytes  116,176.00 bytes/sec
+total size is 57,947  speedup is 1.00
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ cd ../Debugging/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Debugging$ ls
+README.md  networking_commands.txt
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Debugging$ cd ../Networking/
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ scp -v networking_commands.txt vipul@172.24.0.1:/C:/Users/vipul/Desktop/
+Executing: program /usr/bin/ssh host 172.24.0.1, user vipul, command sftp
+debug1: OpenSSH_10.2p1 Ubuntu-2ubuntu3.2, OpenSSL 3.5.5 27 Jan 2026
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Reading configuration data /etc/ssh/ssh_config.d/20-systemd-ssh-proxy.conf
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to 172.24.0.1 [172.24.0.1] port 22.
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ 
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ nc -zv 172.24.0.1 3000
+Connection to 172.24.0.1 3000 port [tcp/*] succeeded!
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ telnet 172.24.0.1 3000
+Trying 172.24.0.1...
+Connected to 172.24.0.1.
+Escape character is '^]'.
+^C
+Connection closed by foreign host.
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ ssh -v vipul@172.24.0.1
+debug1: OpenSSH_10.2p1 Ubuntu-2ubuntu3.2, OpenSSL 3.5.5 27 Jan 2026
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Reading configuration data /etc/ssh/ssh_config.d/20-systemd-ssh-proxy.conf
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to 172.24.0.1 [172.24.0.1] port 22.
+^C
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ sftp -v vipul@172.24.0.1
+debug1: OpenSSH_10.2p1 Ubuntu-2ubuntu3.2, OpenSSL 3.5.5 27 Jan 2026
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Reading configuration data /etc/ssh/ssh_config.d/20-systemd-ssh-proxy.conf
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to 172.24.0.1 [172.24.0.1] port 22.
+^Cvipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ scp networking_commands.txt vipul@172.24.0.1:/C:/Users/vipul/Desktop/
+^Cvipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$ rsync -v networking_commands.txt . ../Debugging/
+skipping directory .
+networking_commands.txt
+
+sent 60,071 bytes  received 35 bytes  40,070.67 bytes/sec
+total size is 59,965  speedup is 1.00
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/Networking$
+
+
+
