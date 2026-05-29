@@ -11,3 +11,189 @@ T3BlblNTTCBUZXN0
 vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ echo "T3BlblNTTCBUZXN0" | openssl base64 -d
 OpenSSL Testvipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
 vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+
+
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ openssl req -x509 -newkey rsa:2048 -keyout /dev/stdout -out /dev/stdout -days 1 -nodes -subj "/CN=localhost"
+.......+...+..........+........+....+.....+.+..+...............+............+.+.........+++++++++++++++++++++++++++++++++++++++*..+..........+..+++++++++++++++++++++++++++++++++++++++*......+........++++++
+..+.............+...+..+.+++++++++++++++++++++++++++++++++++++++*....+++++++++++++++++++++++++++++++++++++++*....+...+..+.......+..+.+...+.........+..+.............+......+.....+.+.....+..........+......+...+.....+.......+..+...+...+.+.....+...............+.+............+..+....+.....+..........+..+.........+..........+......+...+..+....+...+...............+...+...+..+.......+...+..................+..+....+..............+....+..+.+...+.....+.......+.....+.......+...+..+......+............+...........................+...+....+...........+...+.+......+..+.+......+...........+...+.+......+........+....+...+............+..+......+....+.........+.........+...+............+...+..++++++
+-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2KEXbyzX/53cy
+VQRpb19PESO8kot4FmR0yVZUqMLdYtqzB7o+UeQN/C5owszoLb1aP0jMscim9vU0
+PgR5FgWQ4lJBstUFqk8syqdS52kzoAY7hf+O2lwNjo47vVNUQDTDxJj/mqLO5Q3F
+6k/a/whz9WCUi+fgD5H2yI4MOtxAsG+CZEf8qyiEAM5ce2z6oDB7ZEPWK40BUVhZ
+icGS2m83IxgV/XdGp6P3LZQRbbEKx33oODaZB/QCUJ6wNd2PSulLVdtFhFvWxZx4
+6qULHEHbEYzj7amP9jSj7m/riJ2G1aarLXSg7lH9SjBeHDtix4uy1c8CoIkZgJVX
+peGFiivxAgMBAAECggEABcaVIHj7B1gxgVkMwMMVRI6IkYwb+/zJxqIzqI+JTje6
+M38FOsCh+IeMeSnkEWCR5nCnQEZK1HB0KenlfmliV8u1S/v9oSZbSFJMp+ZKgaaL
+TAvdpIvr60of3GkOYVd/1M1BBKnEi8bbfvEFAy6e9/5Jx6v/+CzGNgr55g1funVP
+z+Dr11D4W7kcHCClHHGvpSV1QUjxV+jdSUiA+OT8P00furvHLiVBfIeCxhXob+oQ
++7cD7MbxY8tWWVGPENmMYuTrUYK4ZZszIXpQMfUhN0/U8cIJpse0ZICt2n1Espto
+Px/S/4LynMX/RBjM9LiNPRiJxWTDm9xiI7a+F+JjmQKBgQD/uGMDO158ZFTdF1AM
+uLp12ZPuJZHAb1sCgPuHUAu4qtFxZYeYJ2R9LviQz4mw2ZPNFovqXm2IInTb2zy2
+9vTp2hWVf2zlAW/ohTU2R3ot64m0Olhz7aViTpiUePGANbjNgGDTYCMb/JgjAVwy
+3h9LS6qMss7UU8mK5ZPOApnK0wKBgQC2W0kAuNKArG0iJkcQyRFURwGQPUP6Szj1
+vD8azA1m7biD9zw6DLqyRATOVUWB0M0U4XE1VxPfGDE9szqksmCvzbuwKWHitlbY
+FoSwBj3mDXYTG4pw6dkteO4VNJumU1E5cMP9u0G1quBeacz2WB8EU7tKc3raZKNU
+WdDOceDrqwKBgF3mVi08orBooyTgR5u0RXu63nAnSYLxIOkldbc1NGimCOxrzMOZ
+S3QQSGPcYYIYEwbPDaeM7wl7JZAJzByfSEWKuDxCIzlgMrieGXEKBBpSkCkm943y
+KLWViL+UPZHHqEmFp4hWl+3R7geEm1duau1aJpEto3ciITKopIKUP+bTAoGATGm4
+D4ti+fRGztaHVOtMTaprZ0uk3o8C0UYOk2YJ/6WBehrxq8mFuglykht9QsaCCUvm
+qllQxF1Y1OfznOv6Q/DLwye0EtIhVe8prrEO4wWlAqC5xFLZZIqWCWDAEFQ9Zvpv
+xjTfdgaiei2Pa3LFnISRqML3Keid4Ey6iKeDfn0CgYEAvFVfC/dbwIU7Zt3R1/Hz
+BHHoQTRUbDu9KSBdWPb8ou1a6noP24iWvzTNUlweeER/m5NYnDn8rRJW/c2e/Mus
+XevGKeJxIPblu/8r6tlC2FErIW9zIayDIhvkw2wEnMzt4QIFGu30jztHojZAWPno
+hu5tiFTybRkr7qabPVmly2M=
+-----END PRIVATE KEY-----
+-----
+-----BEGIN CERTIFICATE-----
+MIIDCTCCAfGgAwIBAgIUYbDopAQXyPA1ZZyzQW0mDlj2zD8wDQYJKoZIhvcNAQEL
+BQAwFDESMBAGA1UEAwwJbG9jYWxob3N0MB4XDTI2MDUyOTE3MzUwM1oXDTI2MDUz
+MDE3MzUwM1owFDESMBAGA1UEAwwJbG9jYWxob3N0MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAtihF28s1/+d3MlUEaW9fTxEjvJKLeBZkdMlWVKjC3WLa
+swe6PlHkDfwuaMLM6C29Wj9IzLHIpvb1ND4EeRYFkOJSQbLVBapPLMqnUudpM6AG
+O4X/jtpcDY6OO71TVEA0w8SY/5qizuUNxepP2v8Ic/VglIvn4A+R9siODDrcQLBv
+gmRH/KsohADOXHts+qAwe2RD1iuNAVFYWYnBktpvNyMYFf13Rqej9y2UEW2xCsd9
+6Dg2mQf0AlCesDXdj0rpS1XbRYRb1sWceOqlCxxB2xGM4+2pj/Y0o+5v64idhtWm
+qy10oO5R/UowXhw7YseLstXPAqCJGYCVV6XhhYor8QIDAQABo1MwUTAdBgNVHQ4E
+FgQUj42jO2ZjS9oM5EnF35o4SkpWGUgwHwYDVR0jBBgwFoAUj42jO2ZjS9oM5EnF
+35o4SkpWGUgwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAiwpf
+XU9PdlV+xYcEcxvAqfZ9Z3I3AiNZJ6bNCT1nBaREep+H73hIe23uicokHolJYnD+
+xG9fNw8UIomKGpZdvTK9teRx5BC7PxPdW89NZb51U5vRNzkJDfHaoYH74bKrgd+o
+JZijmwVxLs/4aRqrYNbpFhj4K27JEYeUINICUIArWozLPvoFJ2zNkk0yh1+l8aqe
+uw7yNcqSAZEAWCAi0xy/1xyPe6ejZ5HcwH/rFjUj6XKOP4VEuSNC0h5ArcBGHlOl
+HTTXEvf1PbKpfVOnQw7HRDPcRkNA87wBsXfbT6rUO022tfVyd03obYYx4UYrOiz3
+kl7pN6xfT7Bx1E1NnQ==
+-----END CERTIFICATE-----
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ echo -n "secret message" | openssl enc -aes-256-cbc -a -salt -pass pass:demo
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+U2FsdGVkX1/N+ipUBC41CAB/3xFpJqM9k3chNZXOS7E=
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ echo "U2FsdGVkX18AAAAAAAAAAQ==" | openssl enc -aes-256-cbc -a -d -pass pass:demo
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+bad decrypt
+40774349437A0000:error:1C80006B:Provider routines:ossl_cipher_generic_block_final:wrong final block length:../providers/implementations/ciphers/ciphercommon.c:465:
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ openssl list -digest-algorithms
+Legacy:
+  RSA-MD4 => MD4
+  RSA-MD5 => MD5
+  RSA-RIPEMD160 => RIPEMD160
+  RSA-SHA1 => SHA1
+  RSA-SHA1-2 => RSA-SHA1
+  RSA-SHA224 => SHA224
+  RSA-SHA256 => SHA256
+  RSA-SHA3-224 => SHA3-224
+  RSA-SHA3-256 => SHA3-256
+  RSA-SHA3-384 => SHA3-384
+  RSA-SHA3-512 => SHA3-512
+  RSA-SHA384 => SHA384
+  RSA-SHA512 => SHA512
+  RSA-SHA512/224 => SHA512-224
+  RSA-SHA512/256 => SHA512-256
+  RSA-SM3 => SM3
+  BLAKE2b512
+  BLAKE2s256
+  id-rsassa-pkcs1-v1_5-with-sha3-224 => SHA3-224
+  id-rsassa-pkcs1-v1_5-with-sha3-256 => SHA3-256
+  id-rsassa-pkcs1-v1_5-with-sha3-384 => SHA3-384
+  id-rsassa-pkcs1-v1_5-with-sha3-512 => SHA3-512
+  MD4
+  md4WithRSAEncryption => MD4
+  MD5
+  MD5-SHA1
+  md5WithRSAEncryption => MD5
+  ripemd => RIPEMD160
+  RIPEMD160
+  ripemd160WithRSA => RIPEMD160
+  rmd160 => RIPEMD160
+  SHA1
+  sha1WithRSAEncryption => SHA1
+  SHA224
+  sha224WithRSAEncryption => SHA224
+  SHA256
+  sha256WithRSAEncryption => SHA256
+  SHA3-224
+  SHA3-256
+  SHA3-384
+  SHA3-512
+  SHA384
+  sha384WithRSAEncryption => SHA384
+  SHA512
+  SHA512-224
+  sha512-224WithRSAEncryption => SHA512-224
+  SHA512-256
+  sha512-256WithRSAEncryption => SHA512-256
+  sha512WithRSAEncryption => SHA512
+  SHAKE128
+  SHAKE256
+  SM3
+  sm3WithRSAEncryption => SM3
+  ssl3-md5 => MD5
+  ssl3-sha1 => SHA1
+  whirlpool
+Provided:
+  { 2.16.840.1.101.3.4.2.10, SHA3-512 } @ default
+  { 2.16.840.1.101.3.4.2.6, SHA-512/256, SHA2-512/256, SHA512-256 } @ default
+  { 2.16.840.1.101.3.4.2.4, SHA-224, SHA2-224, SHA224 } @ default
+  { 2.16.840.1.101.3.4.2.7, SHA3-224 } @ default
+  { 1.3.14.3.2.26, SHA-1, SHA1, SSL3-SHA1 } @ default
+  { 2.16.840.1.101.3.4.2.9, SHA3-384 } @ default
+  { 1.3.36.3.2.1, RIPEMD, RIPEMD-160, RIPEMD160, RMD160 } @ default
+  { 2.16.840.1.101.3.4.2.3, SHA-512, SHA2-512, SHA512 } @ default
+  { 2.16.840.1.101.3.4.2.5, SHA-512/224, SHA2-512/224, SHA512-224 } @ default
+  { 2.16.840.1.101.3.4.2.12, SHAKE-256, SHAKE256 } @ default
+  { 2.16.840.1.101.3.4.2.2, SHA-384, SHA2-384, SHA384 } @ default
+  { 1.2.156.10197.1.401, SM3 } @ default
+  { 2.16.840.1.101.3.4.2.8, SHA3-256 } @ default
+  { 1.2.840.113549.2.5, MD5, SSL3-MD5 } @ default
+  { 1.3.6.1.4.1.1722.12.2.2.8, BLAKE2S-256, BLAKE2s256 } @ default
+  { 2.16.840.1.101.3.4.2.1, SHA-256, SHA2-256, SHA256 } @ default
+  { 1.3.6.1.4.1.1722.12.2.1.16, BLAKE2B-512, BLAKE2b512 } @ default
+  MD5-SHA1 @ default
+  { 2.16.840.1.101.3.4.2.11, SHAKE-128, SHAKE128 } @ default
+  { SHA-256/192, SHA2-256/192, SHA256-192 } @ default
+  KECCAK-224 @ default
+  KECCAK-256 @ default
+  KECCAK-384 @ default
+  KECCAK-512 @ default
+  { KECCAK-KMAC-128, KECCAK-KMAC128 } @ default
+  { KECCAK-KMAC-256, KECCAK-KMAC256 } @ default
+  NULL @ default
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048
+...+...+...+....+...+++++++++++++++++++++++++++++++++++++++*.+....+..+.+..+.......+......+...+.....+......+......+++++++++++++++++++++++++++++++++++++++*...........+...+.+..+...+......+..........+.....+....+...........+....+..+....+...+.....+.+......+...+...........+....+...+...........................+...+..............................+...+..+............+......+.......+..+..........+.....+.+......+.....+.+.........+...+..+...................+............+..+............+...+...+.............+..+....+...+..................+.....+............+......+....+.................+...................+...............+..++++++
+..+.....+....+..+....+++++++++++++++++++++++++++++++++++++++*.+.....+.+.....+++++++++++++++++++++++++++++++++++++++*......+.+.....+...+....+...............+........+.........+.+..+...+.......+........+...+.......+...+......+...+...........+.+..............+.........+.......+...........+...................+...+........+....+...+......+.........+......+...........++++++
+-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7g/MOCa9mLJaF
+GOakxiEatiAN52gHBmN8XBIw8smXNugY4svbgQeTX3eP/FJQJRMB15xO75diZqgd
+PD9BVPqzFkh4aMaT63Y8OjD/sU51Iz3C9RqJeJXySPCBsp7I17uiTGTjc6uERlK5
+RXP8EBUxoOalj2vWs+W4m2X5OIdUxZR7s8R0LxYvjWKupo1nB2AQVYX2FH/W3sQo
+El1ylOzSnuEtWPJAuacTVeYnTR4mDbD/s0nxp5pPMGr+xlY6yfmDwWJ/htBNJt94
+YBuWGogKNi7Y9XcS1BPr1ZcbsUezK8I0fJuKW3LIlezPpCbZ3G8gvPG6jMwReiTp
+CTzhEmZhAgMBAAECggEAAWEsTxyhdo96a1qZC8+iBmJzpEE2bI15UDy/LNlZxAE1
+PkWg4/8Jhrs2PnrH7Otbk0Zk/IGvwUYUaOP8v9F3vLc7wO2zFFCFq1YZmS/9Q0hc
+l8waLgu96AKYXmPpiNG+1tKtZVerBItIkttgyeh2Yh9BwyhlzeEUnhc/7fr3/UF+
++qPBrulNYcOoamJ5+h2OXb9rsm6pDnS7o82jH4gQLy9gu5mLdXrAPpr8sZPMYguQ
+KARZ9IkgOhnpBKIsqbdw1LK0nniw2D3pM5Q3OgHfJkdK24yquZOQuG8IMSbpU6ng
+ymk+6XAvrcn+wbIxVEJUPa0Y51OzG1svcTN2rpCxlwKBgQDsVVB+EW989GFczDFA
+IF/HwL4TZ08RG/zVd/5tlftPqxY2iTUfr6xv4ImHMWdUHtdRSPRZY0PtN46iPunY
+chYZVQ6CtMcEGDNsIdDjejlQiKn8cbT3Vvv6HoiEw3kivOuB/rjRhC2vD1vKV6N6
+nsHnaoUdYYEZpnIh3rv/Qe8ASwKBgQDLHqcQOsJGR/tYxtF+KW+AnIN6bD9ggom+
++QXn/C4pXev+znet60m2Qc6Z8uSo7X2W44R2gDAf1L/lTu9b80yr/Qls7Vxu4t+/
+Wx3KWh/IuduWkaAZT45R56AYtOa+ziUb3UGJxYeE6L31rhi6gNZ7UguhgbIuRhCG
+geantIfAgwKBgQDQEnz/wZIKzY47CXwDHX22fLfclYRDaAS+XRsgmH/esJ6p/TtM
+XnrPNT1gTdrPcSfZZQXc/Ux8ugFWT1XLPwa93ukbotXlgPklJtCmtqFniis/G01c
+xrSqjd9cJE2ui+49UWqe7GTcUAVcrLQ97TCC8oGoUIQ9dRHfSB70qbQm6QKBgBDG
+Az3P3GM5ZoQ6RuqIOXEBe8oMTl+F6CIhJl+174ny+54bJr7yAzBN1uXXrRJWKlzf
+hPzUMSUvyHkDP7j0Koy5ZKHeKBfwHFINEDS5pI5K6ttQQ0xTyYjx+8KOjc+L7nyS
+lOrvqPVM0wMK0Xf1U8DzUYqQz0oK9ypkZ8vJmLxJAoGBAOCoGe+W/JDDPW/voUFP
+MLelxf9/EIHIrZjejMOMU7LgCuBOtXC+ox28w5fOVuCQHxjBdfZPeUOfJoEaHjCP
+ZsjJEQRqV1bYktThP3wml1mY1hBQRDA8wyuddhmPmJoMp2LE49nnwO7O+maSDKYt
+c0GsP4LeJiPslnfArhbn4M8y
+-----END PRIVATE KEY-----
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+
