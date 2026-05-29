@@ -196,4 +196,34 @@ ZsjJEQRqV1bYktThP3wml1mY1hBQRDA8wyuddhmPmJoMp2LE49nnwO7O+maSDKYt
 c0GsP4LeJiPslnfArhbn4M8y
 -----END PRIVATE KEY-----
 vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ openssl version -a
+OpenSSL 3.5.5 27 Jan 2026 (Library: OpenSSL 3.5.5 27 Jan 2026)
+built on: Tue Apr  7 12:05:56 2026 UTC
+platform: debian-amd64
+options:  bn(64,64)
+compiler: gcc -fPIC -pthread -m64 -Wa,--noexecstack -Wall -fzero-call-used-regs=used-gpr -Wa,--noexecstack -g -O2 -Werror=implicit-function-declaration -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/openssl-pn5a0v/openssl-3.5.5=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/openssl-pn5a0v/openssl-3.5.5=/usr/src/openssl-3.5.5-1ubuntu3 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_BUILDING_OPENSSL -DZLIB -DZSTD -DNDEBUG -Wdate-time -D_FORTIFY_SOURCE=3
+OPENSSLDIR: "/usr/lib/ssl"
+ENGINESDIR: "/usr/lib/x86_64-linux-gnu/engines-3"
+MODULESDIR: "/usr/lib/x86_64-linux-gnu/ossl-modules"
+Seeding source: os-specific JITTER (3060300)
+CPUINFO: OPENSSL_ia32cap=0xfedab2235f8bffff:0x00000000009c27a9:0x00000000bc000400:0x0000000000000000:0x0000000000000000
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ openssl prime -generate -bits 128
+326804388195976131046410430528051096877
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ echo -n "message" | openssl dgst -sha256 -hmac "mysecretkey"
+SHA2-256(stdin)= 271284168d4daf6ac253666ee7338b4c78037ccd8223a29162fa835266d52fc0
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+
+
+
+
+
+
 
