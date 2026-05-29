@@ -1,0 +1,13 @@
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ openssl rand -hex 32
+e3d471574d0c0c2623e109ee06ed95e3309f25cc571424aa26681b9d81fc9338
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ openssl rand -base64 48
+GuGudyX7gsjjpnes8UXmR1mHYJCR6+8cM9IMRjQxru9xFurDkEHsDzAezUS7i8Mb
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ echo -n "hello world" | openssl dgst -sha256
+SHA2-256(stdin)= b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ echo -n "OpenSSL Test" | openssl base64
+T3BlblNTTCBUZXN0
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$ echo "T3BlblNTTCBUZXN0" | openssl base64 -d
+OpenSSL Testvipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
+vipul@VsHostname:~/workspace/MyProjects/Infra_Automation/OpenSSL$
